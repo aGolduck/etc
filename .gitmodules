@@ -1,0 +1,3 @@
+[submodule "spacemacs"]
+	path = spacemacs
+	url = git@gitlab.com:wpchou/spacemacs.d
