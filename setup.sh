@@ -1,13 +1,11 @@
 #pkgs=("zsh" "vim" "emacs" "tmux" "autossh" "git")
 #for ((i=0; i<${#pkgs[*]}; i++))
 #do
-#	brew install ${pkgs[i]}
+#	install ${pkgs[i]}
 #done
 
 #git clone git@gitlab.com:wpchou/etc.git ~/etc
 #cd ~/etc/
-#git checkout origin/macos
-#git checkout -b macos
 #git submodule init
 #git submodule update
 
@@ -17,5 +15,5 @@
 
 # zsh
 #git clone https://github.com/robbyrussell/oh-my-zsh.git ~/dev/share/oh-my-zsh
-#ln -s ~/etc/zshrc ~/.zshrc
+#ln -s ~/etc/zsh/zshrc ~/.zshrc
 #chsh -s /usr/bin/zsh
