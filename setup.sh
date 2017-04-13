@@ -1,11 +1,19 @@
-#pkgs=("zsh" "vim" "emacs" "tmux" "autossh" "git")
-#for ((i=0; i<${#pkgs[*]}; i++))
+#brew_pkgs=("zsh" "vim" "emacs" "tmux" "autossh" "git")
+#for ((i=0; i<${#brew_pkgs[*]}; i++))
 #do
-#	install ${pkgs[i]}
+#	brew install ${brew_pkgs[i]}
 #done
+
+npm_pkgs=("commitizen")
+for ((i=0; i<${#npm_pkgs[*]}; i++))
+do
+    npm install ${npm_pkgs[i]}
+done
 
 #git clone git@gitlab.com:wpchou/etc.git ~/etc
 #cd ~/etc/
+#git checkout origin/macos
+#git checkout -b macos
 #git submodule init
 #git submodule update
 
