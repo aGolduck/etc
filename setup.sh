@@ -1,13 +1,20 @@
-#brew_pkgs=("zsh" "vim" "emacs" "tmux" "autossh" "git")
-#for ((i=0; i<${#brew_pkgs[*]}; i++))
-#do
-#	brew install ${brew_pkgs[i]}
-#done
+sysOS=`uname -s`
+echo $sysOS" initializing"
 
-npm_pkgs=("commitizen")
+shared_pkgs=("zsh" "vim" "emacs" "tmux" "autossh" "git")
+for ((i=0; i<${shared_pkgs[*]}; i++))
+do
+	if [ $sysOS == "Darwin" ]; then
+		brew install ${shared_pkgs[i]}
+	elif [ %sysOS == "Linux" ]; then
+		sudo apt install ${shared_pkgs[i]}
+	fi
+done
+
+npm_pkgs=("commitizen" "tern" "eslint" "babel-eslint" "eslint-plugin-react" "js-beautify")
 for ((i=0; i<${#npm_pkgs[*]}; i++))
 do
-    npm install ${npm_pkgs[i]}
+    npm install ${npm_pkgs[i]} -g
 done
 
 #git clone git@gitlab.com:wpchou/etc.git ~/etc
