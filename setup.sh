@@ -1,7 +1,7 @@
 sysOS=`uname -s`
 echo $sysOS" initializing"
 
-shared_pkgs=("zsh" "vim" "emacs" "tmux" "autossh" "git")
+shared_pkgs=("zsh" "vim" "emacs" "tmux" "autossh" "git" "silversearcher-ag" "tig" "trash-cli")
 for ((i=0; i<${shared_pkgs[*]}; i++))
 do
 	if [ $sysOS == "Darwin" ]; then
@@ -11,7 +11,7 @@ do
 	fi
 done
 
-npm_pkgs=("commitizen" "tern" "eslint" "babel-eslint" "eslint-plugin-react" "js-beautify")
+npm_pkgs=("commitizen" "tern" "eslint" "babel-eslint" "eslint-plugin-react" "js-beautify" "yarn" "pm2")
 for ((i=0; i<${#npm_pkgs[*]}; i++))
 do
     npm install ${npm_pkgs[i]} -g
@@ -30,3 +30,10 @@ done
 #git clone https://github.com/robbyrussell/oh-my-zsh.git ~/dev/share/oh-my-zsh
 #ln -s ~/etc/zsh/zshrc ~/.zshrc
 #chsh -s /usr/bin/zsh
+
+# npm
+#ln -s ~/etc/npmrc ~/.npmrc
+#yarn config set registry 'https://registry.npm.taobao.org'
+
+# git
+#ln -s ~/etc/gitconfig_pensonal ~/.gitconfig
