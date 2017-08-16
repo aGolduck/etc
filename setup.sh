@@ -1,5 +1,6 @@
 sysOS=`uname -s`
 echo $sysOS" initializing"
+sudo usermod -aG vboxsf $(whoami)
 
 shared_pkgs=("zsh" "vim" "emacs" "tmux" "autossh" "git" "silversearcher-ag" "tig" "trash-cli")
 for ((i=0; i<${shared_pkgs[*]}; i++))
@@ -31,7 +32,7 @@ done
 #ln -s ~/etc/zsh/zshrc ~/.zshrc
 #chsh -s /usr/bin/zsh
 
-# npm
+# npm, yarn
 #ln -s ~/etc/npmrc ~/.npmrc
 #yarn config set registry 'https://registry.npm.taobao.org'
 
