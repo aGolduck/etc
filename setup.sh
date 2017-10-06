@@ -2,7 +2,7 @@ sysOS=`uname -s`
 echo $sysOS" initializing"
 sudo usermod -aG vboxsf $(whoami)
 
-shared_pkgs=("zsh" "vim" "emacs" "tmux" "autossh" "git" "silversearcher-ag" "tig" "trash-cli")
+shared_pkgs=("zsh" "vim" "emacs" "tmux" "autossh" "git" "silversearcher-ag" "tig" "trash-cli" "openjdk-8-jdk" "graphviz" "autojump" "ctags")
 for ((i=0; i<${shared_pkgs[*]}; i++))
 do
 	if [ $sysOS == "Darwin" ]; then
@@ -12,13 +12,14 @@ do
 	fi
 done
 
-npm_pkgs=("commitizen" "tern" "eslint" "babel-eslint" "eslint-plugin-react" "js-beautify" "yarn" "pm2")
+npm_pkgs=("commitizen" "cz-conventional-changelog" "tern" "eslint" "babel-eslint" "eslint-plugin-react" "js-beautify" "yarn" "pm2")
 for ((i=0; i<${#npm_pkgs[*]}; i++))
 do
     npm install ${npm_pkgs[i]} -g
 done
 
 #git clone git@gitlab.com:wpchou/etc.git ~/etc
+#ln -s ~/etc/git/czrc ~/.czrc
 #cd ~/etc/
 #git submodule init
 #git submodule update
