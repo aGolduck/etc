@@ -2,7 +2,7 @@ sysOS=`uname -s`
 echo $sysOS" initializing"
 sudo usermod -aG vboxsf $(whoami)
 
-shared_pkgs=("zsh" "vim" "emacs" "tmux" "autossh" "git" "silversearcher-ag" "tig" "trash-cli" "openjdk-8-jdk" "graphviz" "autojump" "ctags")
+shared_pkgs=("zsh" "vim" "emacs" "tmux" "autossh" "git" "silversearcher-ag" "tig" "trash-cli" "openjdk-8-jdk" "graphviz" "virtualbox-guest-utils" "autojump" "ctags")
 for ((i=0; i<${shared_pkgs[*]}; i++))
 do
 	if [ $sysOS == "Darwin" ]; then
