@@ -1,9 +1,10 @@
 sysOS=`uname -s`
 echo $sysOS" initializing"
+sudo usermod -aG vboxsf $(whoami)
 
-shared_pkgs=("zsh" "vim" "emacs" "tmux" "autossh" "git")
+shared_pkgs=("zsh" "vim" "emacs" "tmux" "autossh" "git" "silversearcher-ag" "tig" "graphviz" "autojump")
 brew_pkgs=("node")
-apt_pkgs=("nodejs" "nodejs-legacy" "npm" "docker.io" "docker-compose")
+apt_pkgs=("nodejs" "docker.io" "docker-compose" "openjdk-8-jdk")
 for ((i=0; i<${shared_pkgs[*]}; i++))
 do
 	if [ $sysOS == "Darwin" ]; then
@@ -13,7 +14,7 @@ do
 	fi
 done
 
-npm_pkgs=("commitizen" "tern" "eslint" "js-beautify" "typings")
+npm_pkgs=("commitizen" "cz-conventional-changelog" "tern" "eslint" "babel-eslint" "eslint-plugin-react" "js-beautify" "yarn" "pm2")
 for ((i=0; i<${#npm_pkgs[*]}; i++))
 do
     npm install ${npm_pkgs[i]} -g
@@ -36,6 +37,7 @@ sudo systemctl daemon-reload
 sudo systemctl restart docker
 
 #git clone git@gitlab.com:wpchou/etc.git ~/etc
+#ln -s ~/etc/git/czrc ~/.czrc
 #cd ~/etc/
 #git submodule init
 #git submodule update
@@ -53,3 +55,10 @@ sudo systemctl restart docker
 #lt -s ~/etc/zsh/zshenv.sh ~/.zshenv
 
 #chsh -s /usr/bin/zsh
+
+# npm, yarn
+#ln -s ~/etc/npmrc ~/.npmrc
+#yarn config set registry 'https://registry.npm.taobao.org'
+
+# git
+#ln -s ~/etc/gitconfig_pensonal ~/.gitconfig
