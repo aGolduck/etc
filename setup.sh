@@ -2,9 +2,27 @@ sysOS=`uname -s`
 echo $sysOS" initializing"
 sudo usermod -aG vboxsf $(whoami)
 
-shared_pkgs=("zsh" "vim" "emacs" "tmux" "autossh" "git" "silversearcher-ag" "tig" "graphviz" "autojump")
-brew_pkgs=("node")
-apt_pkgs=("nodejs" "docker.io" "docker-compose" "openjdk-8-jdk")
+shared_pkgs=(
+    "autojump"
+    "autossh"
+    "emacs"
+    "git"
+    "graphviz"
+    "silversearcher-ag"
+    "tig"
+    "tmux"
+    "vim"
+    "zsh"
+)
+brew_pkgs=(
+    "node"
+)
+apt_pkgs=(
+    "docker.io"
+    "docker-compose"
+    "nodejs"
+    "openjdk-8-jdk"
+)
 for ((i=0; i<${shared_pkgs[*]}; i++))
 do
 	if [ $sysOS == "Darwin" ]; then
@@ -13,8 +31,22 @@ do
 		sudo apt install ${shared_pkgs[i]}
 	fi
 done
+pip2_pkgs=(
+    "wakatime"
+    "percol"
+)
 
-npm_pkgs=("commitizen" "cz-conventional-changelog" "tern" "eslint" "babel-eslint" "eslint-plugin-react" "js-beautify" "yarn" "pm2")
+npm_pkgs=(
+    "babel-eslint"
+    "commitizen"
+    "cz-conventional-changelog"
+    "eslint"
+    "eslint-plugin-react"
+    "js-beautify"
+    "pm2"
+    "tern"
+    "yarn"
+)
 for ((i=0; i<${#npm_pkgs[*]}; i++))
 do
     npm install ${npm_pkgs[i]} -g
