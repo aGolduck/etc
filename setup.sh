@@ -37,13 +37,12 @@ sudo systemctl daemon-reload
 sudo systemctl restart docker
 
 #git clone git@gitlab.com:wpchou/etc.git ~/etc
-#ln -s ~/etc/git/czrc ~/.czrc
 #cd ~/etc/
 #git submodule init
 #git submodule update
 
 # emacs
-#git clone https://github.com/zilongshanren/spacemacs.git ~/.emacs.d
+#git clone https://github.com/syl20bnr/spacemacs.git ~/.emacs.d
 #ln -s ~/etc/spacemacs/ ~/.spacemacs.d
 
 # vim
@@ -61,4 +60,5 @@ sudo systemctl restart docker
 #yarn config set registry 'https://registry.npm.taobao.org'
 
 # git
-#ln -s ~/etc/gitconfig_pensonal ~/.gitconfig
+#ln -s ~/etc/git/config ~/.gitconfig
+#ln -s ~/etc/git/czrc ~/.czrc

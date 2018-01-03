@@ -101,3 +101,6 @@ echo "Use -v!\nUse ts instead of rm!"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+#export http_proxy="http://127.0.0.1:8123/"
+export GTAGSLABEL=pygments
