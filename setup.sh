@@ -4,7 +4,8 @@ sudo usermod -aG vboxsf $(whoami)
 
 shared_pkgs=("zsh" "vim" "emacs" "tmux" "autossh" "git" "silversearcher-ag" "tig" "graphviz" "autojump")
 brew_pkgs=("node")
-apt_pkgs=("nodejs" "docker.io" "docker-compose" "openjdk-8-jdk")
+apt_pkgs=("nodejs" "docker.io" "docker-compose" "openjdk-8-jdk"
+          "markdown")
 for ((i=0; i<${shared_pkgs[*]}; i++))
 do
 	if [ $sysOS == "Darwin" ]; then
@@ -14,17 +15,19 @@ do
 	fi
 done
 
-npm_pkgs=("commitizen" "cz-conventional-changelog" "tern" "eslint" "babel-eslint" "eslint-plugin-react" "js-beautify" "yarn" "pm2")
+# use system node to install global package
+npm_pkgs=("commitizen" "cz-conventional-changelog" "tern" "eslint" "babel-eslint" "eslint-plugin-react" "js-beautify" "yarn" "pm2"
+          "vmd")
 for ((i=0; i<${#npm_pkgs[*]}; i++))
 do
     npm install ${npm_pkgs[i]} -g
 done
 
 #install nvm
-repository mirrors.tuna.tsinghua.edu.cn
-  url: http://mirrors.tuna.tsinghua.edu.cn/hackage
 
 #haskell mirror
+#repository mirrors.tuna.tsinghua.edu.cn
+#  url: http://mirrors.tuna.tsinghua.edu.cn/hackage
 
 #docker mirror
 sudo mkdir -p /etc/docker
