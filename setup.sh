@@ -52,9 +52,9 @@ sudo systemctl restart docker
 #ln -s ~/etc/vimrc ~/.vimrc
 
 # zsh
-#git clone https://github.com/robbyrussell/oh-my-zsh.git ~/dev/share/oh-my-zsh
+#git clone https://github.com/robbyrussell/oh-my-zsh.git ~/share/oh-my-zsh
 #ln -s ~/etc/zsh/zshrc.sh ~/.zshrc
-#lt -s ~/etc/zsh/zshenv.sh ~/.zshenv
+#ln -s ~/etc/zsh/zshenv.sh ~/.zshenv
 
 #chsh -s /usr/bin/zsh
 
