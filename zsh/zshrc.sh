@@ -33,7 +33,38 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/.zshenv
 export PATH="$HOME/bin:$PATH"
 
-[[ -z "$NVM_DIR" ]] && export NVM_DIR="$HOME/.nvm"
-[[ -f "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
 
-export LANG=zh_CN.UTF-8
+function ppgrep() {
+    if [[ $1 == "" ]]; then
+        PERCOL=percol
+    else
+        PERCOL="percol --query $1"
+    fi
+    ps aux | eval $PERCOL | awk '{ print $2 }'
+}
+function ppkill() {
+    if [[ $1 =~ "^-" ]]; then
+        QUERY=""            # options only
+    else
+        QUERY=$1            # with a query
+        [[ $# > 0 ]] && shift
+    fi
+    ppgrep $QUERY | xargs kill $*
+}
+function exists { which $1 &> /dev/null }
+if exists percol; then
+    function percol_select_history() {
+        local tac
+        exists gtac && tac="gtac" || { exists tac && tac="tac" || { tac="tail -r" } }
+        BUFFER=$(fc -l -n 1 | eval $tac | percol --query "$LBUFFER")
+        CURSOR=$#BUFFER         # move cursor
+        zle -R -c               # refresh
+    }
+
+    zle -N percol_select_history
+    bindkey '^R' percol_select_history
+fi
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
