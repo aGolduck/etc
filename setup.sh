@@ -47,10 +47,6 @@ npm_pkgs=(
     "tern"
     "yarn"
 )
-for ((i=0; i<${#npm_pkgs[*]}; i++))
-do
-    npm install ${npm_pkgs[i]} -g
-done
 
 #install nvm
 
@@ -70,8 +66,6 @@ sudo systemctl restart docker
 
 #git clone git@gitlab.com:wpchou/etc.git ~/etc
 #cd ~/etc/
-#git submodule init
-#git submodule update
 
 # emacs
 #git clone https://github.com/syl20bnr/spacemacs.git ~/.emacs.d
@@ -90,6 +84,10 @@ sudo systemctl restart docker
 # npm, yarn
 #ln -s ~/etc/npmrc ~/.npmrc
 #yarn config set registry 'https://registry.npm.taobao.org'
+for ((i=0; i<${#npm_pkgs[*]}; i++))
+do
+    npm install ${npm_pkgs[i]} -g
+done
 
 # git
 #ln -s ~/etc/git/config ~/.gitconfig

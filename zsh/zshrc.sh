@@ -1,9 +1,8 @@
-export ZSH=$HOME/dev/share/oh-my-zsh
+export ZSH=$HOME/usr/share/oh-my-zsh
 ZSH_THEME="sunrise"
-ZSH_CUSTOM=$HOME/etc/zsh/oh-my-zsh
+ZSH_CUSTOM=$HOME/etc/share/zsh/oh-my-zsh
 plugins=(
     autojump
-    brew
     # cask
     command-not-found
     common-aliases
@@ -18,7 +17,6 @@ plugins=(
     nix
     node
     npm
-    nvm
     osx
     pip
     python
@@ -31,8 +29,6 @@ plugins=(
 )
 source $ZSH/oh-my-zsh.sh
 source $HOME/.zshenv
-export PATH="$HOME/bin:$PATH"
-
 
 function ppgrep() {
     if [[ $1 == "" ]]; then
@@ -68,3 +64,4 @@ fi
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
