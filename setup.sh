@@ -64,25 +64,24 @@ EOF
 sudo systemctl daemon-reload
 sudo systemctl restart docker
 
-#git clone git@gitlab.com:wpchou/etc.git ~/etc
-#cd ~/etc/
+#git clone git@gitlab.com:wpchou/etc-share.git ~/etc/share
 
 # emacs
 #git clone https://github.com/syl20bnr/spacemacs.git ~/.emacs.d
-#ln -s ~/etc/spacemacs/ ~/.spacemacs.d
+#ln -s ~/etc/share/spacemacs/ ~/.spacemacs.d
 
 # vim
-#ln -s ~/etc/vimrc ~/.vimrc
+#ln -s ~/etc/share/vimrc ~/.vimrc
 
 # zsh
-#git clone https://github.com/robbyrussell/oh-my-zsh.git ~/share/oh-my-zsh
-#ln -s ~/etc/zsh/zshrc.sh ~/.zshrc
-#ln -s ~/etc/zsh/zshenv.sh ~/.zshenv
+#git clone https://github.com/robbyrussell/oh-my-zsh.git ~/usr/share/oh-my-zsh
+#ln -s ~/etc/share/zsh/zshrc.sh ~/.zshrc
+#ln -s ~/etc/share/zsh/zshenv.sh ~/.zshenv
 
 #chsh -s /usr/bin/zsh
 
 # npm, yarn
-#ln -s ~/etc/npmrc ~/.npmrc
+#ln -s ~/etc/share/npmrc ~/.npmrc
 #yarn config set registry 'https://registry.npm.taobao.org'
 for ((i=0; i<${#npm_pkgs[*]}; i++))
 do
@@ -90,5 +89,8 @@ do
 done
 
 # git
-#ln -s ~/etc/git/config ~/.gitconfig
-#ln -s ~/etc/git/czrc ~/.czrc
+#ln -s ~/etc/share/git/config ~/.gitconfig
+#ln -s ~/etc/share/git/czrc ~/.czrc
+
+# ssh
+ln -s ~/Sync/config/ssh-config ~/.ssh/config

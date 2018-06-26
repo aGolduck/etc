@@ -61,6 +61,30 @@ if exists percol; then
     zle -N percol_select_history
     bindkey '^R' percol_select_history
 fi
+function pclip() {
+    if [ $OS_NAME = "CYGWIN" ]; then
+	putclip "$@";
+    elif [ $OS_NAME = "Darwin" ]; then
+	pbcopy "$@";
+    else
+	if [ -x /usr/bin/xsel ]; then
+	    xsel -ib "$@";
+	else
+	    if [ -x /usr/bin/xclip ]; then
+		xclip -selection c "$@";
+	    else
+		echo "Neither xsel or xclip is installed!"
+	    fi
+	fi
+    fi
+}
+
+function pwdf()
+{
+    local current_dir=`pwd`
+    local copied_file=`find $current_dir -type f -print |percol`
+    echo -n $copied_file |pclip;
+}
 
 export LC_CTYPE
 LC_CTYPE="en_US.UTF-8"
