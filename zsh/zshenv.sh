@@ -17,9 +17,12 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 export PATH="/usr/local/opt/node@8/bin:$PATH"
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
 export MANPATH="/usr/local/man:$MANPATH"
 export MANPATH="/usr/pkg/man:$MANPATH"
 
 export LANG=zh_CN.UTF-8
+
+alias 'ghc'='stack ghc -- '
+alias 'ghci'='stack ghci -- '
