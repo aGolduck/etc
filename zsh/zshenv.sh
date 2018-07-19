@@ -10,7 +10,7 @@ export NIX_PROFILES="/nix/var/nix/profiles/default $HOME/.nix-profile"
 export NIX_SSL_CERT_FILE="/nix/var/nix/profiles/default/etc/ssl/certs/ca-bundle.crt"
 export NIX_PATH="/nix/var/nix/profiles/per-user/root/channels"
 export PATH="$HOME/.nix-profile/bin:$HOME/.nix-profile/sbin:$HOME/.nix-profile/lib/kde4/libexec:/nix/var/nix/profiles/default/bin:/nix/var/nix/profiles/default/sbin:/nix/var/nix/profiles/default/lib/kde4/libexec:$PATH"
-export PATH="$HOME/.cabal/bin:$PATH"
+export PATH="/usr/local/opt/node@8/bin:$PATH"
 
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/tools
@@ -21,6 +21,8 @@ export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
 export MANPATH="/usr/local/man:$MANPATH"
 export MANPATH="/usr/pkg/man:$MANPATH"
+
+export PKG_CONFIG_PATH=/usr/local/Cellar/zlib/1.2.8/lib/pkgconfig:/usr/local/lib/pkgconfig:/opt/X11/lib/pkgconfig
 
 export LANG=zh_CN.UTF-8
 
