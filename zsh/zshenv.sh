@@ -28,3 +28,4 @@ export LANG=zh_CN.UTF-8
 
 alias 'ghc'='stack ghc -- '
 alias 'ghci'='stack ghci -- '
+alias 'runghc'='stack runghc -- '
