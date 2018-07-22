@@ -1,7 +1,8 @@
-USER_BIN_PATH="/usr/local/bin:/usr/local/sbin"
+USR_BIN_PATH="/usr/local/bin:/usr/local/sbin"
+USER_BIN_PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 SYSTEM_BIN_PATH="/usr/bin:/usr/sbin:/bin:/sbin"
 PKG_PATH="/usr/pkg/bin:/usr/pkg/sbin"
-export PATH="$PKG_PATH:$USER_BIN_PATH:$SYSTEM_BIN_PATH"
+export PATH="$USER_BIN_PATH:$PKG_PATH:$USR_BIN_PATH:$SYSTEM_BIN_PATH"
 if [ "$USER" != root -o ! -w /nix/var/nix/db ]; then
     export NIX_REMOTE=daemon
 fi
@@ -17,7 +18,6 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 export PATH="/usr/local/opt/node@8/bin:$PATH"
-export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
 export MANPATH="/usr/local/man:$MANPATH"
 export MANPATH="/usr/pkg/man:$MANPATH"
