@@ -1,35 +1,61 @@
-export ZSH=$HOME/usr/share/oh-my-zsh
-ZSH_THEME="sunrise"
-ZSH_CUSTOM=$HOME/etc/share/zsh/oh-my-zsh
-plugins=(
-    autojump
-    # cask
-    command-not-found
-    common-aliases
-    compleat
-    colored-man-pages
-    colorize
-    cp
-    docker
-    extract
-    git
-    gnu_utils
-    nix
-    node
-    npm
-    osx
-    pip
-    python
-    stack
-    sudo
-    systemd
-    tmux
-    ubuntu
-    web-search
-    yarn
-)
-source $ZSH/oh-my-zsh.sh
+# export ZSH=$HOME/usr/share/oh-my-zsh
+# ZSH_THEME="sunrise"
+# ZSH_CUSTOM=$HOME/etc/share/zsh/oh-my-zsh
+# plugins=(
+#     autojump
+#     # cask
+#     command-not-found
+#     common-aliases
+#     compleat
+#     colored-man-pages
+#     colorize
+#     cp
+#     docker
+#     extract
+#     git
+#     gnu_utils
+#     nix
+#     node
+#     npm
+#     osx
+#     pip
+#     python
+#     stack
+#     sudo
+#     systemd
+#     tmux
+#     ubuntu
+#     web-search
+#     yarn
+# )
+# source $ZSH/oh-my-zsh.sh
 #source $HOME/.zshenv
+
+source $HOME/usr/share/antigen/antigen.zsh
+antigen use oh-my-zsh
+antigen bundle autojump
+antigen bundle command-not-found
+antigen bundle common-aliases
+antigen bundle compleat
+antigen bundle colored-man-pages
+antigen bundle colorize
+antigen bundle cp
+antigen bundle docker
+antigen bundle extract
+antigen bundle git
+antigen bundle gnu_utils
+antigen bundle node
+antigen bundle npm
+antigen bundle osx
+antigen bundle pip
+antigen bundle python
+antigen bundle stack
+antigen bundle sudo
+antigen bundle systemd
+antigen bundle tmux
+antigen bundle ubuntu
+antigen theme sunrise
+antigen apply
 
 function ppgrep() {
     if [[ $1 == "" ]]; then

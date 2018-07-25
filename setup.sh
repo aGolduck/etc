@@ -2,6 +2,10 @@ sysOS=`uname -s`
 echo $sysOS" initializing"
 sudo usermod -aG vboxsf $(whoami)
 
+mkdir -pv ~/etc/share
+mkdir -pv ~/usr/share
+git clone https://github.com/zsh-users/antigen.git $HOME/usr/share/antigen
+
 shared_pkgs=(
     "autojump"
     "autossh"
