@@ -91,6 +91,7 @@ for ((i=0; i<${#npm_pkgs[*]}; i++))
 do
     npm install ${npm_pkgs[i]} -g
 done
+ln -s ~/etc/share/noderc ~/.noderc
 
 # git
 #ln -s ~/etc/share/git/config ~/.gitconfig

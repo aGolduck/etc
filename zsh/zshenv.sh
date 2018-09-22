@@ -1,5 +1,5 @@
 USR_BIN_PATH="/usr/local/bin:/usr/local/sbin"
-USER_BIN_PATH="$HOME/bin:$HOME/.local/bin:$PATH"
+USER_BIN_PATH="$HOME/bin:$HOME/.npm/bin:$HOME/.local/bin::$PATH"
 SYSTEM_BIN_PATH="/usr/bin:/usr/sbin:/bin:/sbin"
 PKG_PATH="/usr/pkg/bin:/usr/pkg/sbin"
 export PATH="$USER_BIN_PATH:$PKG_PATH:$USR_BIN_PATH:$SYSTEM_BIN_PATH"
