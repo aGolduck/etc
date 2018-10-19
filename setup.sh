@@ -99,3 +99,6 @@ ln -s ~/etc/share/noderc ~/.noderc
 
 # ssh
 ln -s ~/Sync/config/ssh-config ~/.ssh/config
+
+# tools
+ln -s ~/etc/share/tmux.conf ~/.tmux.conf
