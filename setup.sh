@@ -1,3 +1,4 @@
+# set up syncthing first
 sysOS=`uname -s`
 echo $sysOS" initializing"
 sudo usermod -aG vboxsf $(whoami)
@@ -35,11 +36,16 @@ do
 		sudo apt install ${shared_pkgs[i]}
 	fi
 done
+#pip mirror
+#/etc/pip.conf ~/.config/pip/pip.conf
 pip2_pkgs=(
     "wakatime"
     "percol"
 )
+pip3_pkgs=(
+)
 
+#npm mirror
 npm_pkgs=(
     "babel-eslint"
     "commitizen"
@@ -54,6 +60,7 @@ npm_pkgs=(
 
 #install nvm
 
+#stack setup
 #haskell mirror
 #repository mirrors.tuna.tsinghua.edu.cn
 #  url: http://mirrors.tuna.tsinghua.edu.cn/hackage
