@@ -6,13 +6,12 @@ export PATH="$USER_BIN_PATH:$PKG_PATH:$USR_BIN_PATH:$SYSTEM_BIN_PATH:$PATH"
 if [ "$USER" != root -o ! -w /nix/var/nix/db ]; then
     export NIX_REMOTE=daemon
 fi
-export PATH="/usr/local/opt/node@8/bin:$PATH"
 
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
-export PATH="/usr/local/opt/node@8/bin:$PATH"
+export PATH="/usr/local/opt/node@10/bin:$PATH"
 
 export MANPATH="/usr/local/man:$MANPATH"
 export MANPATH="/usr/pkg/man:$MANPATH"
