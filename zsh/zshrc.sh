@@ -21,10 +21,10 @@ export PKG_CONFIG_PATH="/usr/local/Cellar/zlib/1.2.11/lib/pkgconfig:/usr/local/l
 
 source $HOME/usr/share/antigen/antigen.zsh
 antigen use oh-my-zsh
-antigen bundle autojump
 antigen bundle colored-man-pages
 antigen bundle extract
 antigen bundle gnu_utils
+antigen bundle z
 
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-completions

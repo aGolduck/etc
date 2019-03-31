@@ -27,6 +27,7 @@ apt_pkgs=(
     "docker-compose"
     "nodejs"
     "openjdk-8-jdk"
+    "wmctrl"
 )
 for ((i=0; i<${shared_pkgs[*]}; i++))
 do
