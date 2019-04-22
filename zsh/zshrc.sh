@@ -1,25 +1,23 @@
 USR_BIN_PATH="/usr/local/bin:/usr/local/sbin"
 USER_BIN_PATH="$HOME/bin:$HOME/.local/bin"
 SYSTEM_BIN_PATH="/usr/bin:/usr/sbin:/bin:/sbin:/snap/bin"
+NODE_MAC_STABLE_PATH="/usr/local/opt/node@10/bin:${PATH}"
 PKG_PATH="/usr/pkg/bin:/usr/pkg/sbin"
-export PATH="$USER_BIN_PATH:$PKG_PATH:$USR_BIN_PATH:$SYSTEM_BIN_PATH:$PATH"
-if [ "$USER" != root -o ! -w /nix/var/nix/db ]; then
+export PATH="${USER_BIN_PATH}:${PKG_PATH}:${USR_BIN_PATH}:${SYSTEM_BIN_PATH}:${PATH}"
+if [ "${USER}" != root -o ! -w /nix/var/nix/db ]; then
     export NIX_REMOTE=daemon
 fi
 
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/platform-tools
+export ANDROID_HOME=${HOME}/Library/Android/sdk
+export PATH=${PATH}:$ANDROID_HOME/tools
+export PATH=${PATH}:$ANDROID_HOME/platform-tools
 
-export PATH="/usr/local/opt/node@10/bin:$PATH"
+export MANPATH="/usr/local/man:${MANPATH}"
+export MANPATH="/usr/pkg/man:${MANPATH}"
 
-export MANPATH="/usr/local/man:$MANPATH"
-export MANPATH="/usr/pkg/man:$MANPATH"
-
-export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
-export PKG_CONFIG_PATH="/usr/local/Cellar/zlib/1.2.11/lib/pkgconfig:/usr/local/lib/pkgconfig:/opt/X11/lib/pkgconfig"
-
-source $HOME/usr/share/antigen/antigen.zsh
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
+export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
+source ${HOME}/usr/share/antigen/antigen.zsh
 antigen use oh-my-zsh
 antigen bundle colored-man-pages
 antigen bundle extract
