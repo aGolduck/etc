@@ -85,18 +85,8 @@ function pwdf()
     echo -n $copied_file |pclip;
 }
 
-export LC_CTYPE="en_US.UTF-8"
-export LC_COLLATE="C"
-export LC_TIME="C"
-export LC_NUMERIC="C"
-export LC_MONETARY="C"
-export LC_MESSAGES="en_US.UTF-8"
-export LC_ALL=""
-
-#export NVM_DIR="$HOME/.nvm"
-#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-#export TNVM_DIR="/home/wenpin/.tnvm"
-#[ -s "$TNVM_DIR/tnvm.sh" ] && . "$TNVM_DIR/tnvm.sh"  # This loads nvm
+export NVS_HOME="$HOME/.nvs"
+[ -s "$NVS_HOME/nvs.sh" ] && . "$NVS_HOME/nvs.sh"
 
 alias 'rm'='echo NO rm for you'
 alias 'ghc'='stack ghc -- '

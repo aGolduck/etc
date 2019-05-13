@@ -1,0 +1,5 @@
+XIM=fcitx
+XIM_PROGRAM=fcitx
+GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+MODIFIERS="@im=fcitx"
