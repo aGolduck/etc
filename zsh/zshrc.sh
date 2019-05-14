@@ -1,9 +1,9 @@
 USR_BIN_PATH="/usr/local/bin:/usr/local/sbin"
 USER_BIN_PATH="$HOME/bin:$HOME/.local/bin"
 SYSTEM_BIN_PATH="/usr/bin:/usr/sbin:/bin:/sbin:/snap/bin"
-NODE_MAC_STABLE_PATH="/usr/local/opt/node@10/bin:${PATH}"
+NODE_MAC_STABLE_PATH="/usr/local/opt/node@10/bin"
 PKG_PATH="/usr/pkg/bin:/usr/pkg/sbin"
-export PATH="${USER_BIN_PATH}:${PKG_PATH}:${USR_BIN_PATH}:${SYSTEM_BIN_PATH}:${PATH}"
+export PATH="${USER_BIN_PATH}:${NODE_MAC_STABLE_PATH}:${PKG_PATH}:${USR_BIN_PATH}:${SYSTEM_BIN_PATH}:${PATH}"
 if [ "${USER}" != root -o ! -w /nix/var/nix/db ]; then
     export NIX_REMOTE=daemon
 fi
@@ -92,3 +92,8 @@ alias 'rm'='echo NO rm for you'
 alias 'ghc'='stack ghc -- '
 alias 'ghci'='stack ghci -- '
 alias 'runghc'='stack runghc -- '
+
+function mo-vpn() {
+    ipsec restart;
+    ipsec up myoffer-vpn | tee -a "${HOME}/Sync/myoffer-vpn.log"
+}
