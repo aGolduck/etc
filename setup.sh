@@ -40,7 +40,6 @@ done
 #pip mirror
 #/etc/pip.conf ~/.config/pip/pip.conf
 pip2_pkgs=(
-    "wakatime"
     "percol"
 )
 pip3_pkgs=(
@@ -53,10 +52,12 @@ npm_pkgs=(
     "cz-conventional-changelog"
     "eslint"
     "eslint-plugin-react"
+    "nodemon"
+    "import-js"
     "js-beautify"
     "pm2"
-    "tern"
-    "yarn"
+    "typescript"
+    "typescript-language-server"
 )
 
 #install nvm
