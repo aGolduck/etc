@@ -88,6 +88,7 @@ function pwdf()
 export NVS_HOME="$HOME/.nvs"
 [ -s "$NVS_HOME/nvs.sh" ] && . "$NVS_HOME/nvs.sh"
 
+alias 'e'='emacsclient -nw'
 alias 'rm'='echo NO rm for you'
 alias 'ghc'='stack ghc -- '
 alias 'ghci'='stack ghci -- '

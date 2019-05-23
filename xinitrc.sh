@@ -69,4 +69,7 @@ export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS="@im=fcitx"
 
+export EDITOR="emacsclient -nw"
+export VISUAL="emacsclient -nw"
+
 exec startkde
