@@ -2,12 +2,13 @@ USR_BIN_PATH="/usr/local/bin:/usr/local/sbin"
 USER_BIN_PATH="$HOME/bin:$HOME/.local/bin"
 SYSTEM_BIN_PATH="/usr/bin:/usr/sbin:/bin:/sbin:/snap/bin"
 NODE_MAC_STABLE_PATH="/usr/local/opt/node@10/bin"
+RUBY_MAC_STABLE_PATH="/usr/local/opt/ruby/bin"
 PKG_PATH="/usr/pkg/bin:/usr/pkg/sbin"
-export PATH="${USER_BIN_PATH}:${NODE_MAC_STABLE_PATH}:${PKG_PATH}:${USR_BIN_PATH}:${SYSTEM_BIN_PATH}:${PATH}"
+
+export PATH="${USER_BIN_PATH}:${NODE_MAC_STABLE_PATH}:${RUBY_MAC_STABLE_PATH}:${PKG_PATH}:${USR_BIN_PATH}:${SYSTEM_BIN_PATH}:${PATH}"
 
 # GEM PATH
-export PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
-
+export PATH="${PATH}:$(ruby -e 'puts Gem.user_dir')/bin"
 
 if [ "${USER}" != root -o ! -w /nix/var/nix/db ]; then
     export NIX_REMOTE=daemon
