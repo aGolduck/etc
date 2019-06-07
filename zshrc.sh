@@ -4,6 +4,11 @@ SYSTEM_BIN_PATH="/usr/bin:/usr/sbin:/bin:/sbin:/snap/bin"
 NODE_MAC_STABLE_PATH="/usr/local/opt/node@10/bin"
 PKG_PATH="/usr/pkg/bin:/usr/pkg/sbin"
 export PATH="${USER_BIN_PATH}:${NODE_MAC_STABLE_PATH}:${PKG_PATH}:${USR_BIN_PATH}:${SYSTEM_BIN_PATH}:${PATH}"
+
+# GEM PATH
+export PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
+
+
 if [ "${USER}" != root -o ! -w /nix/var/nix/db ]; then
     export NIX_REMOTE=daemon
 fi
@@ -94,7 +99,5 @@ alias 'ghc'='stack ghc -- '
 alias 'ghci'='stack ghci -- '
 alias 'runghc'='stack runghc -- '
 
-function mo-vpn() {
-    ipsec restart;
-    ipsec up myoffer-vpn | tee -a "${HOME}/Sync/myoffer-vpn.log"
-}
+alias 'mgt'='mongo mongodb://myoffer:D41d8cd98f00B204e9800998ecf8427E@dds-wz9db587cdce66b433270.mongodb.rds.aliyuncs.com:3717/myoffer'
+alias 'mgo'='mongo mongodb://myoffer:My0ffer2015@dds-wz942bd82f2bc1242309.mongodb.rds.aliyuncs.com:3717/myoffer'
