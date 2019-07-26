@@ -1,11 +1,12 @@
 USR_BIN_PATH="/usr/local/bin:/usr/local/sbin"
-USER_BIN_PATH="$HOME/bin:$HOME/.local/bin"
+USER_BIN_PATH="${HOME}/bin:${HOME}/.local/bin"
 SYSTEM_BIN_PATH="/usr/bin:/usr/sbin:/bin:/sbin:/snap/bin"
 NODE_MAC_STABLE_PATH="/usr/local/opt/node@10/bin"
 RUBY_MAC_STABLE_PATH="/usr/local/opt/ruby/bin"
 PKG_PATH="/usr/pkg/bin:/usr/pkg/sbin"
+RUST_PATH="${HOME}/.cargo/bin"
 
-export PATH="${USER_BIN_PATH}:${NODE_MAC_STABLE_PATH}:${RUBY_MAC_STABLE_PATH}:${PKG_PATH}:${USR_BIN_PATH}:${SYSTEM_BIN_PATH}:${PATH}"
+export PATH="${RUST_PATH}:${USER_BIN_PATH}:${NODE_MAC_STABLE_PATH}:${RUBY_MAC_STABLE_PATH}:${PKG_PATH}:${USR_BIN_PATH}:${SYSTEM_BIN_PATH}:${PATH}"
 
 # GEM PATH
 export PATH="${PATH}:$(ruby -e 'puts Gem.user_dir')/bin"
@@ -102,3 +103,4 @@ alias 'runghc'='stack runghc -- '
 
 alias 'mgt'='mongo mongodb://myoffer:D41d8cd98f00B204e9800998ecf8427E@dds-wz9db587cdce66b433270.mongodb.rds.aliyuncs.com:3717/myoffer'
 alias 'mgo'='mongo mongodb://myoffer:My0ffer2015@dds-wz942bd82f2bc1242309.mongodb.rds.aliyuncs.com:3717/myoffer'
+alias 'mgu'='mongo mongodb://myoffer:D41d8cd98f00B204e9800998ecf8427E@dds-wz9db587cdce66b433270.mongodb.rds.aliyuncs.com:3717/myoffer-unittest'
