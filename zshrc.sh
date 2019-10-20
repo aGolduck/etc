@@ -26,6 +26,7 @@ export RUSTUP_UPDATE_ROOT="https://mirrors.ustc.edu.cn/rust-static/rustup"
 
 source ${HOME}/usr/share/antigen/antigen.zsh
 antigen use oh-my-zsh
+antigen bundle ansible
 antigen bundle colored-man-pages
 antigen bundle extract
 antigen bundle gnu_utils
