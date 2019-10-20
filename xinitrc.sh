@@ -72,4 +72,4 @@ export XMODIFIERS="@im=fcitx"
 export EDITOR="emacsclient -nw"
 export VISUAL="emacsclient -nw"
 
-exec startkde
+exec startplasma-x11
