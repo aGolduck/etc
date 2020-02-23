@@ -23,7 +23,7 @@ export MANPATH="/usr/pkg/man:${MANPATH}"
 
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
-source ${HOME}/usr/share/antigen/antigen.zsh
+source ${HOME}/github/zsh-users/antigen/antigen.zsh
 antigen use oh-my-zsh
 antigen bundle colored-man-pages
 antigen bundle extract
