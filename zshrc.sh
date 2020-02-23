@@ -106,7 +106,7 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init - --no-rehash)"
 
 alias 'e'='emacsclient -nw'
-alias 'rm'='echo NO rm for you'
+alias 'rm'='rm -i '
 alias 'ghc'='stack ghc -- '
 alias 'ghci'='stack ghci -- '
 alias 'runghc'='stack runghc -- '
