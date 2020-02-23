@@ -1,0 +1,14 @@
+[Desktop Entry]
+Comment=remember to clear env varables in .spacemacs.d
+Exec=GTK_IM_MODULE= QT_IM_MODULE= XMODIFIERS= emacs %F
+GenericName=Emacs with im disabled
+Icon=/home/wenpin/.emacs.d/assets/spacemacs.svg
+Name=Spacemacs
+NoDisplay=false
+Path[$e]=
+StartupNotify=true
+Terminal=0
+TerminalOptions=
+Type=Application
+X-KDE-SubstituteUID=false
+X-KDE-Username=
