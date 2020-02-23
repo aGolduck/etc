@@ -1,7 +1,8 @@
+#!/usr/bin/env xdg-open
 [Desktop Entry]
-Comment=remember to clear env varables in .spacemacs.d
+Comment=best editor
 Exec=GTK_IM_MODULE= QT_IM_MODULE= XMODIFIERS= emacs %F
-GenericName=Emacs with im disabled
+GenericName=Emacs without IM, clear spacemacs.env first
 Icon=/home/wenpin/.emacs.d/assets/spacemacs.svg
 Name=Spacemacs
 NoDisplay=false
