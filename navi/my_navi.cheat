@@ -1,0 +1,22 @@
+% my_navi
+
+# remove all elc to recompile spacemacs
+find ~/.emacs.d/elpa/ -name "*.elc" -exec rm {} \;
+
+# ansible become-user
+ansible -b --become-user=<username>
+
+# journalctl
+journalctl -f -u <unit>
+
+# sed delete lines
+sed "<first-line>,<last-line>d" <file>
+
+# sed delete one line
+sed "<line-number>d" <file>
+
+# spacemacs clean elc
+find ~/.emacs.d/elpa/ -name "*.elc" -exec rm {} \;
+
+# copy file to multiple targets
+echo <directories> | xargs -n 1 cp <file>
