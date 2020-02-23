@@ -38,7 +38,7 @@ antigen bundle zsh-users/zsh-autosuggestions
 #antigen bundle zsh-users/zsh-history-substring-search
 
 antigen bundle denisidoro/navi
-export NAVI_PATH="${HOME}/etc/share/navi:/opt/navi/cheats"
+export NAVI_PATH="${HOME}/etc/share/navi:${HOME}/.antigen/bundles/denisidoro/navi/cheats"
 # color scheme for navi
 export FZF_DEFAULT_OPTS='--color=light'
 
