@@ -115,3 +115,22 @@ alias 'mgt'='mongo mongodb://myoffer:D41d8cd98f00B204e9800998ecf8427E@dds-wz9db5
 alias 'mgo'='mongo mongodb://myoffer:My0ffer2015@dds-wz942bd82f2bc1242309.mongodb.rds.aliyuncs.com:3717/myoffer'
 alias 'mgu'='mongo mongodb://myoffer:D41d8cd98f00B204e9800998ecf8427E@dds-wz9db587cdce66b433270.mongodb.rds.aliyuncs.com:3717/myoffer-unittest'
 alias setproxy="export ALL_PROXY=socks5://127.0.0.1:1080" alias unsetproxy="unset ALL_PROXY"
+# export PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin${PATH+:$PATH}";
+# export MANPATH="/home/linuxbrew/.linuxbrew/share/man${MANPATH+:$MANPATH}:";
+# export INFOPATH="/home/linuxbrew/.linuxbrew/share/info${INFOPATH+:$INFOPATH}";
+
+function brew_disable() {
+	  export PATH=${PATH##*"/.linuxbrew/bin:"}
+	  export PATH=${PATH##*"/.linuxbrew/sbin:"}
+	  export MANPATH=${MANPATH##*"/.linuxbrew/share/man:"}
+	  export INFOPATH=${INFOPATH##*"/.linuxbrew/share/info:"}
+}
+
+function brew_enable() {
+	  LINUXBREW='/home/linuxbrew/.linuxbrew'
+	  brew_disable
+	  export PATH="$LINUXBREW/bin:$LINUXBREW/sbin:$PATH"
+	  export MANPATH="$LINUXBREW/share/man:$MANPATH"
+	  export INFOPATH="$LINUXBREW/share/info:$INFOPATH"
+	  # export HOMEBREW_NO_AUTO_UPDATE=1
+}
