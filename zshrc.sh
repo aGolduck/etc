@@ -134,3 +134,5 @@ function brew_enable() {
 	  export INFOPATH="$LINUXBREW/share/info:$INFOPATH"
 	  # export HOMEBREW_NO_AUTO_UPDATE=1
 }
+
+export PS1="%n%?%M%~%# "
