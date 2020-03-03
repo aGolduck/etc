@@ -135,4 +135,8 @@ function brew_enable() {
 	  # export HOMEBREW_NO_AUTO_UPDATE=1
 }
 
+function cgh() {
+    git clone https://github.com/${${${1}#'https://github.com/'}%'.git'}.git ~/g/${${${1}#'https://github.com/'}%'.git'}
+}
+
 export PS1="%n%?%M%~%# "
