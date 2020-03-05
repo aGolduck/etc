@@ -18,7 +18,8 @@ export PATH=${PATH}:$ANDROID_HOME/platform-tools
 export MANPATH="/usr/local/man:${MANPATH}"
 export MANPATH="/usr/pkg/man:${MANPATH}"
 
-export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
+# export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
 export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
 
 export RUSTUP_DIST_SERVER="https://mirrors.ustc.edu.cn/rust-static"
