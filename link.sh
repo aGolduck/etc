@@ -11,8 +11,10 @@ ln -si ../../../etc/share/desktops/spacemacs.desktop ~/.local/share/applications
 ln -si ../../../etc/share/desktops/doom-emacs.desktop ~/.local/share/applications/doom-emacs.desktop
 ln -si ../../../etc/share/desktops/centaur-emacs.desktop ~/.local/share/applications/centaur-emacs.desktop
 
-ln -si g ~/github.com
+mkdir -p ~/g ~/b ~/r
+ln -si g ~/com.github
 ln -si g ~/github
 ln -si b ~/blob
 ln -si r ~/repo
 ln -si r ~/repository
+ln -si ../g ~/r/com.github

@@ -115,19 +115,22 @@ alias 'runghc'='stack runghc -- '
 alias 'mgt'='mongo mongodb://myoffer:D41d8cd98f00B204e9800998ecf8427E@dds-wz9db587cdce66b433270.mongodb.rds.aliyuncs.com:3717/myoffer'
 alias 'mgo'='mongo mongodb://myoffer:My0ffer2015@dds-wz942bd82f2bc1242309.mongodb.rds.aliyuncs.com:3717/myoffer'
 alias 'mgu'='mongo mongodb://myoffer:D41d8cd98f00B204e9800998ecf8427E@dds-wz9db587cdce66b433270.mongodb.rds.aliyuncs.com:3717/myoffer-unittest'
-alias setproxy="export ALL_PROXY=socks5://127.0.0.1:1080" alias unsetproxy="unset ALL_PROXY"
+
+export ELECTRON_MIRROR="https://npm.taobao.org/mirrors/electron/"
+export SASS_BINARY_SITE="https://npm.taobao.org/mirrors/node-sass"
+
 # export PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin${PATH+:$PATH}";
 # export MANPATH="/home/linuxbrew/.linuxbrew/share/man${MANPATH+:$MANPATH}:";
 # export INFOPATH="/home/linuxbrew/.linuxbrew/share/info${INFOPATH+:$INFOPATH}";
 
-function brew_disable() {
+function prew_disable() {
 	  export PATH=${PATH##*"/.linuxbrew/bin:"}
 	  export PATH=${PATH##*"/.linuxbrew/sbin:"}
 	  export MANPATH=${MANPATH##*"/.linuxbrew/share/man:"}
 	  export INFOPATH=${INFOPATH##*"/.linuxbrew/share/info:"}
 }
 
-function brew_enable() {
+function prew_enable() {
 	  LINUXBREW='/home/linuxbrew/.linuxbrew'
 	  brew_disable
 	  export PATH="$LINUXBREW/bin:$LINUXBREW/sbin:$PATH"
@@ -139,5 +142,14 @@ function brew_enable() {
 function cgh() {
     git clone https://github.com/${${${1}#'https://github.com/'}%'.git'}.git ~/g/${${${1}#'https://github.com/'}%'.git'}
 }
+
+function prew() {
+    PATH="/home/linuxbrew/.linuxbrew/bin:$PATH" /home/linuxbrew/.linuxbrew/bin/brew "$@"
+}
+
+# export http_proxy="socks5://127.0.0.1:1080"
+# export https_proxy="socks5://127.0.0.1:1080"
+# # export ALL_PROXY=socks5://127.0.0.1:1080
+alias setproxy="export ALL_PSSROXY=socks5://127.0.0.1:1080" alias unsetproxy="unset ALL_PROXYss"
 
 export PS1="%n%?%M%~%# "
