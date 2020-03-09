@@ -1,3 +1,4 @@
+#!/usr/bin/env xdg-open
 [Desktop Entry]
 Comment[zh_CN]=Centaur Emacs with IM disabled
 Comment=Centaur Emacs with IM disabled
