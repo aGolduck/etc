@@ -1,0 +1,17 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Comment=Spacemacs with IM disabled
+Exec=GTK_IM_MODULE= QT_IM_MODULE= XMODIFIERS= emacs --with-profile spacemacs %F
+GenericName=Spacemacs with IM disabled
+Icon=/home/wenpin/g/syl20bnr/spacemacs/assets/spacemacs.svg
+Name=Spacemacs
+NoDisplay=false
+Path[$e]=
+StartupNotify=true
+Terminal=0
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=

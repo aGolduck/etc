@@ -5,7 +5,11 @@ ln -si etc/share/tmux.conf ~/.tmux.conf
 ln -si ../etc/share/vnc-xstartup.sh ~/.vnc/xstartup
 ln -si etc/share/zshrc.sh ~/.zshrc
 ln -si etc/share/pam_enviroment ~/.pam_enviroment
-ln -si ../../../etc/share/desktops/Spacemacs.desktop ~/.local/share/applications/Spacemacs.desktop
+
+ln -si etc/share/emacs-profiles.el ~/.emacs-profiles.el
+ln -si ../../../etc/share/desktops/spacemacs.desktop ~/.local/share/applications/spacemacs.desktop
+ln -si ../../../etc/share/desktops/doom-emacs.desktop ~/.local/share/applications/doom-emacs.desktop
+ln -si ../../../etc/share/desktops/centaur-emacs.desktop ~/.local/share/applications/centaur-emacs.desktop
 
 ln -si g ~/github.com
 ln -si g ~/github

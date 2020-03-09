@@ -1,0 +1,18 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Comment=Doom Emacs with IM disabled
+Exec=GTK_IM_MODULE= QT_IM_MODULE= XMODIFIERS= emacs --with-profile doom %F
+GenericName=Doom Emacs with IM disabled
+Icon=/home/wenpin/g/syl20bnr/spacemacs/assets/spacemacs.svg
+MimeType=
+Name=Doom emacs
+NoDisplay=false
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=
