@@ -1,4 +1,4 @@
-(("default" . ((user-emacs-directory . "~/g/syl20bnr/spacemacs")))
+(("default" . ((user-emacs-directory . "~/.emacs.d")))
  ("vanilla" . ((user-emacs-directory . "~/.emacs.d")))
  ("spacemacs" . ((user-emacs-directory . "~/g/syl20bnr/spacemacs")
                  (env . (("SPACEMACSDIR" . "~/.spacemacs.d")))))
