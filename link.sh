@@ -10,6 +10,7 @@ ln -si etc/share/emacs-profiles.el ~/.emacs-profiles.el
 ln -si ../../../etc/share/desktops/spacemacs.desktop ~/.local/share/applications/spacemacs.desktop
 ln -si ../../../etc/share/desktops/doom-emacs.desktop ~/.local/share/applications/doom-emacs.desktop
 ln -si ../../../etc/share/desktops/centaur-emacs.desktop ~/.local/share/applications/centaur-emacs.desktop
+ln -si ../../etc/share/xterm-24bits ~/.terminfo/78/xterm-24bits
 
 mkdir -p ~/g ~/b ~/r
 ln -si g ~/com.github
