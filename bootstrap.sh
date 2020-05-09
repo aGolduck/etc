@@ -11,4 +11,6 @@ ssh-keygen -q -t rsa -b 4096 -N '' -f ~/.ssh/xps_rsa 2>/dev/null <<< y >/dev/nul
 git clone https://github.com/plexus/chemacs.git ~/g/plexus/chemacs
 . ~/g/plexus/chemacs/install.sh
 
+tic -x -o ~/.terminfo terminfo-24bit.src
+
 source ./link.sh
