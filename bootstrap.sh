@@ -1,3 +1,4 @@
+## 参照韦易笑 https://zhuanlan.zhihu.com/p/50080614
 echo "source ~/.local/xxx/init.sh" >> ~/.zshrc
 
 mkdir -p ~/.ssh
