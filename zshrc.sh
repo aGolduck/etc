@@ -76,3 +76,8 @@ export SASS_BINARY_SITE="https://npm.taobao.org/mirrors/node-sass"
 alias setproxy="export ALL_PSSROXY=socks5://127.0.0.1:1080" alias unsetproxy="unset ALL_PROXYss"
 
 export PS1="%n%?%M%~%# "
+vterm_prompt_end() {
+    vterm_printf "51;A$(whoami)@$(hostname):$(pwd)";
+}
+setopt PROMPT_SUBST
+PROMPT=$PROMPT'%{$(vterm_prompt_end)%}'
