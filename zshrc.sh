@@ -1,3 +1,5 @@
+ZSH_CONFIG_HOME=${HOME}/etc/share/zsh
+
 ### path
 export ANDROID_HOME=${HOME}/Library/Android/sdk
 
@@ -38,9 +40,9 @@ export SASS_BINARY_SITE="https://npm.taobao.org/mirrors/node-sass"
 
 
 
-source ${HOME}/etc/share/functions.sh
-source ${HOME}/etc/share/plugins.sh
-source ${HOME}/etc/share/aliases.sh
+source ${ZSH_CONFIG_HOME}/functions.sh
+source ${ZSH_CONFIG_HOME}/plugins.sh
+source ${ZSH_CONFIG_HOME}/aliases.sh
 
 
 
