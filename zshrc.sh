@@ -27,26 +27,6 @@ export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
 export RUSTUP_DIST_SERVER="https://mirrors.ustc.edu.cn/rust-static"
 export RUSTUP_UPDATE_ROOT="https://mirrors.ustc.edu.cn/rust-static/rustup"
 
-source ${HOME}/github/zsh-users/antigen/antigen.zsh
-antigen use oh-my-zsh
-antigen bundle ansible
-antigen bundle colored-man-pages
-antigen bundle extract
-antigen bundle gnu_utils
-antigen bundle z
-
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-completions
-antigen bundle zsh-users/zsh-autosuggestions
-#antigen bundle zsh-users/zsh-history-substring-search
-
-antigen bundle denisidoro/navi
-export NAVI_PATH="${HOME}/etc/share/navi:${HOME}/.antigen/bundles/denisidoro/navi/cheats"
-# color scheme for navi
-export FZF_DEFAULT_OPTS='--color=light'
-
-antigen apply
-
 
 ### language/platform version managers
 # load rbenv
@@ -56,6 +36,8 @@ eval "$(rbenv init - --no-rehash)"
 
 export ELECTRON_MIRROR="https://npm.taobao.org/mirrors/electron/"
 export SASS_BINARY_SITE="https://npm.taobao.org/mirrors/node-sass"
+source ${HOME}/etc/share/plugins.sh
+source ${HOME}/etc/share/aliases.sh
 
 # export PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin${PATH+:$PATH}";
 # export MANPATH="/home/linuxbrew/.linuxbrew/share/man${MANPATH+:$MANPATH}:";
