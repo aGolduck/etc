@@ -53,15 +53,6 @@ antigen apply
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init - --no-rehash)"
 
-alias 'e'='emacsclient -nw'
-alias 'rm'='rm -i '
-alias 'ghc'='stack ghc -- '
-alias 'ghci'='stack ghci -- '
-alias 'runghc'='stack runghc -- '
-
-alias 'mgt'='mongo mongodb://myoffer:D41d8cd98f00B204e9800998ecf8427E@dds-wz9db587cdce66b433270.mongodb.rds.aliyuncs.com:3717/myoffer'
-alias 'mgo'='mongo mongodb://myoffer:My0ffer2015@dds-wz942bd82f2bc1242309.mongodb.rds.aliyuncs.com:3717/myoffer'
-alias 'mgu'='mongo mongodb://myoffer:D41d8cd98f00B204e9800998ecf8427E@dds-wz9db587cdce66b433270.mongodb.rds.aliyuncs.com:3717/myoffer-unittest'
 
 export ELECTRON_MIRROR="https://npm.taobao.org/mirrors/electron/"
 export SASS_BINARY_SITE="https://npm.taobao.org/mirrors/node-sass"
