@@ -1,1 +1,1 @@
-sh -c "$(curl -fsSL https://。。。/bootstrap.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/wpchou/etc/master/bootstrap.sh)"

@@ -1,15 +1,17 @@
-ln -si etc/share/gemrc ~/.gemrc
-ln -si etc/share/gitconfig ~/.gitconfig
-ln -si etc/share/mongorc.js ~/.mongorc.js
-ln -si etc/share/tmux.conf ~/.tmux.conf
-ln -si ../etc/share/vnc-xstartup.sh ~/.vnc/xstartup
-ln -si etc/share/zshrc.sh ~/.zshrc
-ln -si etc/share/pam_enviroment ~/.pam_enviroment
+ETC_REPO='.local/etc'
 
-ln -si etc/share/emacs-profiles.el ~/.emacs-profiles.el
-ln -si ../../../etc/share/desktops/spacemacs.desktop ~/.local/share/applications/spacemacs.desktop
-ln -si ../../../etc/share/desktops/doom-emacs.desktop ~/.local/share/applications/doom-emacs.desktop
-ln -si ../../../etc/share/desktops/centaur-emacs.desktop ~/.local/share/applications/centaur-emacs.desktop
+ln -si ${ETC_REPO}/gemrc ~/.gemrc
+ln -si ${ETC_REPO}/gitconfig ~/.gitconfig
+ln -si ${ETC_REPO}/mongorc.js ~/.mongorc.js
+ln -si ${ETC_REPO}/tmux.conf ~/.tmux.conf
+ln -si ../${ETC_REPO}/vnc-xstartup.sh ~/.vnc/xstartup
+ln -si ${ETC_REPO}/zshrc.sh ~/.zshrc
+ln -si ${ETC_REPO}/pam_enviroment ~/.pam_enviroment
+
+ln -si ${ETC_REPO}/emacs-profiles.el ~/.emacs-profiles.el
+ln -si ../../../${ETC_REPO}/desktops/spacemacs.desktop ~/.local/share/applications/spacemacs.desktop
+ln -si ../../../${ETC_REPO}/desktops/doom-emacs.desktop ~/.local/share/applications/doom-emacs.desktop
+ln -si ../../../${ETC_REPO}/desktops/centaur-emacs.desktop ~/.local/share/applications/centaur-emacs.desktop
 
 mkdir -p ~/g ~/b ~/r
 ln -si g ~/com.github
