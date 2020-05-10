@@ -1,5 +1,8 @@
 source ${HOME}/etc/share/functions.sh
 
+### path
+export ANDROID_HOME=${HOME}/Library/Android/sdk
+
 USR_BIN_PATH="/usr/local/bin:/usr/local/sbin"
 USER_BIN_PATH="${HOME}/bin:${HOME}/.local/bin"
 SYSTEM_BIN_PATH="/usr/bin:/usr/sbin:/bin:/sbin:/snap/bin"
@@ -8,14 +11,16 @@ RUBY_MAC_STABLE_PATH="/usr/local/opt/ruby/bin"
 PKG_PATH="/usr/pkg/bin:/usr/pkg/sbin"
 RUST_PATH="${HOME}/.cargo/bin"
 
-export PATH="${RUST_PATH}:${USER_BIN_PATH}:${NODE_MAC_STABLE_PATH}:${RUBY_MAC_STABLE_PATH}:${PKG_PATH}:${USR_BIN_PATH}:${SYSTEM_BIN_PATH}:${PATH}"
+export PATH="${RUST_PATH}:${USER_BIN_PATH}:${NODE_MAC_STABLE_PATH}:${RUBY_MAC_STABLE_PATH}:${PKG_PATH}:${USR_BIN_PATH}:${SYSTEM_BIN_PATH}:${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools"
+### homebrew packages should not be preferred
+# export PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin${PATH+:$PATH}";
+# export MANPATH="/home/linuxbrew/.linuxbrew/share/man${MANPATH+:$MANPATH}:";
+# export INFOPATH="/home/linuxbrew/.linuxbrew/share/info${INFOPATH+:$INFOPATH}";
 
-# GEM PATH
+### dynamic path
 export PATH="$(ruby -e 'puts Gem.user_dir')/bin:${PATH}"
-
-export ANDROID_HOME=${HOME}/Library/Android/sdk
-export PATH=${PATH}:$ANDROID_HOME/tools
-export PATH=${PATH}:$ANDROID_HOME/platform-tools
+export PATH="${HOME}/.rbenv/bin:${PATH}"
+eval "$(rbenv init - --no-rehash)"
 
 export MANPATH="/usr/local/man:${MANPATH}"
 export MANPATH="/usr/pkg/man:${MANPATH}"
@@ -28,10 +33,6 @@ export RUSTUP_DIST_SERVER="https://mirrors.ustc.edu.cn/rust-static"
 export RUSTUP_UPDATE_ROOT="https://mirrors.ustc.edu.cn/rust-static/rustup"
 
 
-### language/platform version managers
-# load rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init - --no-rehash)"
 
 
 export ELECTRON_MIRROR="https://npm.taobao.org/mirrors/electron/"
@@ -39,9 +40,6 @@ export SASS_BINARY_SITE="https://npm.taobao.org/mirrors/node-sass"
 source ${HOME}/etc/share/plugins.sh
 source ${HOME}/etc/share/aliases.sh
 
-# export PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin${PATH+:$PATH}";
-# export MANPATH="/home/linuxbrew/.linuxbrew/share/man${MANPATH+:$MANPATH}:";
-# export INFOPATH="/home/linuxbrew/.linuxbrew/share/info${INFOPATH+:$INFOPATH}";
 
 # export http_proxy="socks5://127.0.0.1:1080"
 # export https_proxy="socks5://127.0.0.1:1080"
