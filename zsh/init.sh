@@ -21,10 +21,8 @@ export MANPATH="/usr/pkg/man:${MANPATH}"
 source $(dirname "$0")/path.sh
 source $(dirname "$0")/functions.sh
 # for login shell only
-if [[ -o login ]]; then
-    source $(dirname "$0")/plugins.sh
-    source $(dirname "$0")/aliases.sh
-fi
+source $(dirname "$0")/plugins.sh
+source $(dirname "$0")/aliases.sh
 
 ### tuning
 # export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
@@ -53,3 +51,8 @@ vterm_prompt_end() {
 }
 setopt PROMPT_SUBST
 PROMPT=$PROMPT'%{$(vterm_prompt_end)%}'
+
+### login shell
+if [[ -o login ]]; then
+    echo 'logining...'
+fi
