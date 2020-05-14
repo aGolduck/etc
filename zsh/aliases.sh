@@ -1,3 +1,4 @@
+alias 'top'='top -c'
 alias 'e'='emacsclient -nw'
 alias 'rm'='rm -i '
 alias 'ghc'='stack ghc -- '
