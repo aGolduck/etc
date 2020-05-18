@@ -54,5 +54,5 @@ PROMPT=$PROMPT'%{$(vterm_prompt_end)%}'
 
 ### login shell
 if [[ -o login ]]; then
-    echo 'logining...'
+    echo "logining ${HOST}..."
 fi
