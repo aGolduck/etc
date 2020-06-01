@@ -36,6 +36,11 @@ export RUSTUP_UPDATE_ROOT="https://mirrors.ustc.edu.cn/rust-static/rustup"
 export ELECTRON_MIRROR="https://npm.taobao.org/mirrors/electron/"
 export SASS_BINARY_SITE="https://npm.taobao.org/mirrors/node-sass"
 
+### history
+export HISTSIZE=1000000000
+export HISTSAVE=1000000000
+
+
 ### proxy
 # export http_proxy="socks5://127.0.0.1:1080"
 # export https_proxy="socks5://127.0.0.1:1080"
