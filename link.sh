@@ -8,10 +8,11 @@ ln -si ../${ETC_REPO}/vnc-xstartup.sh ~/.vnc/xstartup
 ln -si ${ETC_REPO}/zshrc.sh ~/.zshrc
 ln -si ${ETC_REPO}/pam_enviroment ~/.pam_enviroment
 
-ln -si ${ETC_REPO}/emacs-profiles.el ~/.emacs-profiles.el
-ln -si ../../../${ETC_REPO}/desktops/spacemacs.desktop ~/.local/share/applications/spacemacs.desktop
-ln -si ../../../${ETC_REPO}/desktops/doom-emacs.desktop ~/.local/share/applications/doom-emacs.desktop
-ln -si ../../../${ETC_REPO}/desktops/centaur-emacs.desktop ~/.local/share/applications/centaur-emacs.desktop
+# ln -si ${ETC_REPO}/emacs-profiles.el ~/.emacs-profiles.el
+# ln -si ../../../${ETC_REPO}/desktops/spacemacs.desktop ~/.local/share/applications/spacemacs.desktop
+# ln -si ../../../${ETC_REPO}/desktops/doom-emacs.desktop ~/.local/share/applications/doom-emacs.desktop
+# ln -si ../../../${ETC_REPO}/desktops/centaur-emacs.desktop ~/.local/share/applications/centaur-emacs.desktop
+ln -si ../../../${ETC_REPO}/desktops/org-protocol.desktop ~/.local/share/applications/org-protocol.desktop
 
 mkdir -p ~/g ~/b ~/r
 ln -si g ~/com.github
