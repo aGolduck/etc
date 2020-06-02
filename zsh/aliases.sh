@@ -58,7 +58,8 @@ alias 'unix-name'='uname'
 alias 'virtual-memory-statistics'='vmstat'
 alias 'web-get'='wget'
 alias 'word-count'='wc'
-
+alias 'network-mapper'='nmap'
+alias 'diagnostic-message'='dmesg'
 
 alias 'top'='top -c'
 alias 'e'='emacsclient -nw'
