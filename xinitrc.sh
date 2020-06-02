@@ -57,6 +57,7 @@ export LC_TIME="en_US.UTF-8"
 export LC_COLLATE="en_US.UTF-8"
 export LC_MONETARY="en_US.UTF-8"
 # use zh_CN messages to use Chinese man pages
+# 几乎所有中文的 man pages 都是过时的，所以打开这个选项意义不大
 export LC_MESSAGES="zh_CN.UTF-8"
 export LC_PAPER="zh_CN.UTF-8"
 export LC_NAME="en_US.UTF-8"
