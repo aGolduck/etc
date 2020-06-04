@@ -1,3 +1,5 @@
+ETC_REPO='.local/etc'
+
 source ${HOME}/github/zsh-users/antigen/antigen.zsh
 antigen use oh-my-zsh
 antigen bundle ansible
@@ -12,7 +14,7 @@ antigen bundle zsh-users/zsh-autosuggestions
 # antigen bundle zsh-users/zsh-history-substring-search
 
 antigen bundle denisidoro/navi
-export NAVI_PATH="${HOME}/etc/share/navi:${HOME}/.antigen/bundles/denisidoro/navi/cheats"
+export NAVI_PATH="${ETC_REPO}/navi:${HOME}/.antigen/bundles/denisidoro/navi/cheats"
 # color scheme for navi
 export FZF_DEFAULT_OPTS='--color=light'
 
