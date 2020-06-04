@@ -50,12 +50,17 @@ alias setproxy="export ALL_PROXY=socks5://127.0.0.1:1080"
 alias unsetproxy="unset ALL_PROXY"
 
 ### prompts
+## bash style prompt
 export PS1="%n%?%M%~%# "
-vterm_prompt_end() {
-    vterm_printf "51;A$(whoami)@$(hostname):$(pwd)";
-}
+## zsh style prompt
+# Load version control information
+autoload -Uz vcs_info
+precmd() { vcs_info }
+# Format the vcs_info_msg_0_ variable
+zstyle ':vcs_info:git:*' formats '(%b)'
+# Set up the prompt (with git branch name)
 setopt PROMPT_SUBST
-PROMPT=$PROMPT'%{$(vterm_prompt_end)%}'
+PROMPT='%n%?%M%~${vcs_info_msg_0_} %# '
 
 ### login shell
 if [[ -o login ]]; then
