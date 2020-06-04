@@ -11,7 +11,7 @@ antigen bundle z
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-autosuggestions
-# antigen bundle zsh-users/zsh-history-substring-search
+antigen bundle zsh-users/zsh-history-substring-search
 
 antigen bundle denisidoro/navi
 export NAVI_PATH="${ETC_REPO}/navi:${HOME}/.antigen/bundles/denisidoro/navi/cheats"
@@ -21,3 +21,6 @@ export FZF_DEFAULT_OPTS='--color=light'
 
 
 antigen apply
+
+bindkey '^P' history-substring-search-up
+bindkey '^N' history-substring-search-down
