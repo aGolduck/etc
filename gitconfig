@@ -10,3 +10,11 @@
         gpgsign = true
 [github]
 	user = wpchou
+	oauth-token = 7deb0785ff7678db47e22ff7e2c216df1870a9f9
+# [https]
+# 	proxy = socks5://127.0.0.1:1080
+# [http]
+# 	proxy = socks5://127.0.0.1:1080
+#	postBuffer = 100000000
+# [ssh]
+#	postBuffer = 100000000
