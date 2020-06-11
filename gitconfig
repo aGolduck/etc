@@ -5,5 +5,8 @@
 [user]
 	email = wpchou@outlook.com
 	name = wenpin
+        signingKey = "01249F5D0B340926"
+[commit]
+        gpgsign = true
 [github]
 	user = wpchou
