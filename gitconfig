@@ -5,12 +5,11 @@
 [user]
 	email = wpchou@outlook.com
 	name = wenpin
-        signingKey = "01249F5D0B340926"
+	signingkey = 9304B8C9
 [commit]
-        gpgsign = true
+	gpgsign = true
 [github]
 	user = wpchou
-	oauth-token = 7deb0785ff7678db47e22ff7e2c216df1870a9f9
 # [https]
 # 	proxy = socks5://127.0.0.1:1080
 # [http]
