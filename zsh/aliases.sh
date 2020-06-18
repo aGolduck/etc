@@ -78,3 +78,5 @@ alias 'unix-name'='uname'
 alias 'virtual-memory-statistics'='vmstat'
 alias 'web-get'='wget'
 alias 'word-count'='wc'
+alias 'desktop-management-interface-decode'='dmidecode'
+
