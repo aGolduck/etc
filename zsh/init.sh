@@ -46,7 +46,7 @@ export NPM_CONFIG_PREFIX=~/.local
 
 ### history
 export HISTSIZE=1000000000
-export HISTSAVE=1000000000
+export SAVEHIST=1000000000
 
 
 ### proxy
