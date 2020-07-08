@@ -13,6 +13,7 @@ ln -si ${ETC_REPO}/pam_enviroment ~/.pam_enviroment
 # ln -si ../../../${ETC_REPO}/desktops/doom-emacs.desktop ~/.local/share/applications/doom-emacs.desktop
 # ln -si ../../../${ETC_REPO}/desktops/centaur-emacs.desktop ~/.local/share/applications/centaur-emacs.desktop
 ln -si ../../../${ETC_REPO}/desktops/org-protocol.desktop ~/.local/share/applications/org-protocol.desktop
+ln -si ~/Applications/zotero/zotero.desktop ~/.local/share/applications/zotero.desktop
 
 mkdir -p ~/g ~/b ~/r
 ln -si g ~/com.github

@@ -1,0 +1,15 @@
+[Desktop Entry]
+Version=1.0
+Name=Telegram Desktop
+Comment=Telegram with fcitx enabled
+TryExec=/opt/telegram/telegram
+Exec=GTK_IM_MODULE=fcitx QT_IM_MODULE=fcitx XMODIFIERS="@im=fcitx" /opt/telegram/telegram -- %u
+Icon=telegram
+Terminal=false
+StartupWMClass=TelegramDesktop
+Type=Application
+Categories=Network;InstantMessaging;Qt;
+MimeType=x-scheme-handler/tg;
+Keywords=tg;chat;im;messaging;messenger;sms;tdesktop;
+X-GNOME-UsesNotifications=true
+X-Desktop-File-Install-Version=0.23
