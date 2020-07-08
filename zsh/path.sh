@@ -1,5 +1,10 @@
 export ANDROID_HOME=${HOME}/Library/Android/sdk
-export JAVA_HOME=/usr/lib/jvm/default-java
+if [ -d /usr/lib/jvm/default ]
+then
+    export JAVA_HOME=/usr/lib/jvm/default
+else
+    export JAVA_HOME=/usr/lib/jvm/default-java
+fi
 
 USR_BIN_PATH="/usr/local/bin:/usr/local/sbin"
 USER_BIN_PATH="${HOME}/bin:${HOME}/.local/bin"
