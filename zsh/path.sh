@@ -1,4 +1,5 @@
 export ANDROID_HOME=${HOME}/Library/Android/sdk
+export JAVA_HOME=/usr/lib/jvm/default-java
 
 USR_BIN_PATH="/usr/local/bin:/usr/local/sbin"
 USER_BIN_PATH="${HOME}/bin:${HOME}/.local/bin"
@@ -16,8 +17,8 @@ export PATH="${RUST_PATH}:${USER_BIN_PATH}:${NODE_MAC_STABLE_PATH}:${RUBY_MAC_ST
 
 ### dynamic path
 export PATH="$(ruby -e 'puts Gem.user_dir')/bin:${PATH}"
-export PATH="${HOME}/.rbenv/bin:${PATH}"
-eval "$(rbenv init - --no-rehash)"
+#export PATH="${HOME}/.rbenv/bin:${PATH}"
+#eval "$(rbenv init - --no-rehash)"
 
 # 整理 PATH，删除重复路径
 if [ -n "$PATH" ]; then
