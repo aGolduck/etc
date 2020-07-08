@@ -1,4 +1,4 @@
-ETC_REPO='.local/etc'
+ETC_REPO="${HOME}/.local/etc"
 
 source ${HOME}/github/zsh-users/antigen/antigen.zsh
 antigen use oh-my-zsh
