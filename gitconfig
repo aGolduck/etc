@@ -7,7 +7,7 @@
 	name = wenpin
 	signingkey = 9304B8C9
 [commit]
-	gpgsign = true
+	# gpgsign = true
 [github]
 	user = wpchou
 # [https]
