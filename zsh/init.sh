@@ -23,26 +23,6 @@ source $(dirname "$0")/functions.sh
 source $(dirname "$0")/plugins.sh
 source $(dirname "$0")/aliases.sh
 
-### tuning
-# export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
-export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
-export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
-export HOMEBREW_NO_AUTO_UPDATE=1
-
-export RUSTUP_DIST_SERVER="https://mirrors.ustc.edu.cn/rust-static"
-export RUSTUP_UPDATE_ROOT="https://mirrors.ustc.edu.cn/rust-static/rustup"
-
-export ELECTRON_MIRROR="https://npm.taobao.org/mirrors/electron/"
-export SASS_BINARY_SITE="https://npm.taobao.org/mirrors/node-sass"
-
-# npm 全局包安装需满足两个条件: 1. 不需要系统权限, 2. 无需因为 node 版本升级/变化重装
-# 将包安装在 ~/.local 下实现无需系统权限，而且实现多用户隔离
-# 但是将 `prefix=~/.local` 配置在 ~/.npmrc 会导致 nvm 完全无法使用
-# 在 zshrc 中配置 NPM_CONFIG_PREFIX 并在 bashrc 中 unset NPM_CONFIG_PREFIX
-# 再将 nvm 的 loading 脚本的过程加到 bashrc
-# 日常使用 zsh, 需要切换 node 版本使用 bash
-# 满足日常 node 包的使用的稳定要求，也满足 node 开发版本的切换需求
-export NPM_CONFIG_PREFIX=~/.local
 
 ### history
 export HISTSIZE=1000000000
