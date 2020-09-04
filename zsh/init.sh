@@ -13,11 +13,6 @@ case "$-" in
     *) return
 esac
 
-### man path
-export MANPATH="/usr/local/man:${MANPATH}"
-export MANPATH="/usr/pkg/man:${MANPATH}"
-
-
 ### source modules
 source $(dirname "$0")/variables.sh
 source $(dirname "$0")/functions.sh

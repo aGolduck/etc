@@ -32,3 +32,7 @@ if [ -n "$PATH" ]; then
     unset old_PATH x
 fi
 export PATH
+
+## MANPATH is removed, it is not neccessary.
+## if extra manuals are needed, set MANPATH as below
+## export MANPATH="$(manpath):/other/manual/paths"
