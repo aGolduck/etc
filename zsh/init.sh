@@ -16,15 +16,19 @@ esac
 ### man path
 export MANPATH="/usr/local/man:${MANPATH}"
 export MANPATH="/usr/pkg/man:${MANPATH}"
+
+
 ### source modules
-source $(dirname "$0")/path.sh
+source $(dirname "$0")/variables.sh
 source $(dirname "$0")/functions.sh
-# TODO for interactive shell only
-source $(dirname "$0")/plugins.sh
 source $(dirname "$0")/aliases.sh
+source $(dirname "$0")/path.sh
+_MANUAL_PATH="${PATH}"
+source $(dirname "$0")/plugins.sh
+export _TRAILING_PATH=${PATH#${_MANUAL_PATH}}
 
 
-### history
+### history, 必须在 oh-my-zsh 配置
 export HISTSIZE=1000000000
 export SAVEHIST=1000000000
 
