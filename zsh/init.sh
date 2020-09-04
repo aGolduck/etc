@@ -56,5 +56,6 @@ PROMPT='%n%?%M%~${vcs_info_msg_0_} %# '
 
 ### login shell
 if [[ -o login ]]; then
+    ## 该检测对 macos 不起作用
     echo "logining ${HOST}..."
 fi

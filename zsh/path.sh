@@ -2,7 +2,7 @@ if [ -z ${_INHERITED_PATH+x} ]; then
     _INHERITED_PATH=${PATH}
 fi
 
-export PATH="${RUST_PATH}:${USER_BIN_PATH}:${NODE_MAC_STABLE_PATH}:${RUBY_MAC_STABLE_PATH}:${PKG_PATH}:${USR_BIN_PATH}:${SYSTEM_BIN_PATH}:${_INHERITED_PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools"
+export PATH="${RUST_PATH}:${USER_BIN_PATH}:${NODE_MAC_STABLE_PATH}:${RUBY_MAC_STABLE_PATH}:${PKG_PATH}:${USR_BIN_PATH}:${SYSTEM_BIN_PATH}:${_INHERITED_PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools${_TRAILING_PATH}"
 
 ### linuxbrew packages should not be preferred
 # export PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin${PATH+:$PATH}";
