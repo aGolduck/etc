@@ -16,6 +16,7 @@ mkdir -p ~/.local/share/applications
 ln -si ../../../${ETC_REPO}/desktops/org-protocol.desktop ~/.local/share/applications/org-protocol.desktop
 ln -si ~/Applications/zotero/zotero.desktop ~/.local/share/applications/zotero.desktop
 
+# TODO 这种 link 方法不具备幂等性
 mkdir -p ~/g ~/b ~/r
 ln -si g ~/github.com
 ln -si g ~/github
