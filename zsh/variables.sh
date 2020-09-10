@@ -8,6 +8,7 @@ else
     export JAVA_HOME=/usr/lib/jvm/default-java
 fi
 
+export SNAP_BIN_PATH="/snap/bin"
 export USR_BIN_PATH="/usr/local/bin:/usr/local/sbin"
 export USER_BIN_PATH="${HOME}/bin:${HOME}/.local/bin"
 export SYSTEM_BIN_PATH="/usr/bin:/usr/sbin:/bin:/sbin:/snap/bin"
