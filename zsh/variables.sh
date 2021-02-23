@@ -16,6 +16,9 @@ export NODE_MAC_STABLE_PATH="/usr/local/opt/node@10/bin"
 export RUBY_MAC_STABLE_PATH="/usr/local/opt/ruby/bin"
 export PKG_PATH="/usr/pkg/bin:/usr/pkg/sbin"
 export RUST_PATH="${HOME}/.cargo/bin"
+export GUIX_PATH="${HOME}/.guix-profile/bin:${HOME}/.config/guix/current/bin"
+export CABAL_PATH="${HOME}/.cabal/bin"
+export GHCUP_PATH="${HOME}/.ghcup/bin"
 
 ### tuning
 # export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
@@ -37,3 +40,7 @@ export SASS_BINARY_SITE="https://npm.taobao.org/mirrors/node-sass"
 # 日常使用 zsh, 需要切换 node 版本使用 bash
 # 满足日常 node 包的使用的稳定要求，也满足 node 开发版本的切换需求
 export NPM_CONFIG_PREFIX=~/.local
+
+# guix
+export GUIX_LOCPATH="${HOME}/.guix-profile/lib/locale"
+export GUIX_PROFILE="/home/wenpin/.guix-profile"
