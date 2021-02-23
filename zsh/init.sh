@@ -49,6 +49,10 @@ zstyle ':vcs_info:git:*' formats '(%b)'
 setopt PROMPT_SUBST
 PROMPT='%n%?%M%~${vcs_info_msg_0_} %# '
 
+### for emacs-libvterm
+autoload -U add-zsh-hook
+add-zsh-hook -Uz chpwd (){ print -Pn "\e]2;%m:%2~\a" }
+
 ### login shell
 if [[ -o login ]]; then
     ## 该检测对 macos 不起作用
