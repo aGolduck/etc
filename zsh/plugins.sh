@@ -4,8 +4,10 @@ source ${HOME}/github/zsh-users/antigen/antigen.zsh
 antigen use oh-my-zsh
 antigen bundle ansible
 antigen bundle colored-man-pages
+antigen bundle docker
 antigen bundle extract
 antigen bundle gnu_utils
+antigen bundle mvn
 antigen bundle z
 
 antigen bundle zsh-users/zsh-syntax-highlighting
