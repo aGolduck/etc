@@ -1,11 +1,12 @@
-git clone https://github.com/wpchou/etc.git ~/.local/etc
+ETC_REPO="${HOME}/g/etc"
+
+git clone https://github.com/wpchou/etc.git ${ETC_REPO}
 git clone https://github.com/zsh-users/antigen.git ~/g/zsh-users/antigen
-echo "source ~/.local/etc/zsh/init.sh" >> ~/.zshrc
-echo "source ~/.local/etc/zsh/variables.sh" >> ~/.zprofile
-echo "source ~/.local/etc/zsh/path.sh" >> ~/.zprofile
+echo "source ${ETC_REPO}/zsh/interactive.sh" >> ~/.zshrc
+echo "source ${ETC_REPO}/zsh/env.sh" >> ~/.zshenv
 mkdir -p ~/.config/plasma-workspace/env
-echo "source ~/.zprofile" >> ~/.config/plasma-workspace/env/path.sh
+echo "source ~/.zshenv" >> ~/.config/plasma-workspace/env/path.sh
 
-tic -x -o ~/.terminfo ~/.local/etc/terminfo-24bit.src
+tic -x -o ~/.terminfo ${ETC_REPO}/terminfo-24bit.src
 
-source ~/.local/etc/link.sh
+source ${ETC_REPO}/link.sh

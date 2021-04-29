@@ -14,13 +14,11 @@ case "$-" in
 esac
 
 ### source modules
-source $(dirname "$0")/variables.sh
+## env are set in zshenv
+# source $(dirname "$0")/env.sh
 source $(dirname "$0")/functions.sh
 source $(dirname "$0")/aliases.sh
-source $(dirname "$0")/path.sh
-_MANUAL_PATH="${PATH}"
 source $(dirname "$0")/plugins.sh
-export _TRAILING_PATH=${PATH#${_MANUAL_PATH}}
 
 
 ### history, 必须在 oh-my-zsh 配置
@@ -53,7 +51,7 @@ PROMPT='%n%?%M%~${vcs_info_msg_0_} %# '
 autoload -U add-zsh-hook
 add-zsh-hook -Uz chpwd (){ print -Pn "\e]2;%m:%2~\a" }
 
-### login shell
+### login shell, can be replaced by .zprofile and .zlogin
 if [[ -o login ]]; then
     ## 该检测对 macos 不起作用
     echo "logining ${HOST}..."

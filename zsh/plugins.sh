@@ -1,6 +1,6 @@
-ETC_REPO="${HOME}/.local/etc"
+ETC_REPO="${HOME}/g/etc"
 
-source ${HOME}/github/zsh-users/antigen/antigen.zsh
+source ${HOME}/g/zsh-users/antigen/antigen.zsh
 antigen use oh-my-zsh
 antigen bundle ansible
 antigen bundle colored-man-pages

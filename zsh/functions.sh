@@ -19,6 +19,10 @@ function cgh() {
     git clone https://github.com/${${${1}#'https://github.com/'}%'.git'}.git ~/g/${${${1}#'https://github.com/'}%'.git'}
 }
 
+function cgw() {
+    git clone git@git.woa.com:${${${1}#'git@git.woa.com:'}%'.git'}.git ~/w/${${${1}#'git@git.woa.com:'}%'.git'}
+}
+
 function pclip() {
     if [ $OS_NAME = "CYGWIN" ]; then
 	putclip "$@";

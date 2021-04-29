@@ -1,4 +1,4 @@
-ETC_REPO='.local/etc'
+ETC_REPO='g/etc'
 
 mkdir -p ~/.vnc
 ln -si ${ETC_REPO}/gemrc ~/.gemrc
