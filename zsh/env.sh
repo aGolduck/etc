@@ -12,6 +12,16 @@ export GUIX_PATH="${HOME}/.guix-profile/bin:${HOME}/.config/guix/current/bin"
 export CABAL_PATH="${HOME}/.cabal/bin"
 export GHCUP_PATH="${HOME}/.ghcup/bin"
 
+kernel="$(uname -s)"
+case $kernel in
+    Linux)
+        export COURSIER_PATH="${HOME}/.local/share/coursier/bin"
+    ;;
+    Darwin)
+        export COURSIER_PATH="${HOME}/Library/Application Support/Coursier/bin"
+    ;;
+esac
+
 ### tuning
 # export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 # export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"
@@ -35,7 +45,7 @@ export NPM_CONFIG_PREFIX=~/.local
 
 # guix
 export GUIX_LOCPATH="${HOME}/.guix-profile/lib/locale"
-export GUIX_PROFILE="/home/wenpin/.guix-profile"
+export GUIX_PROFILE="${HOME}/.guix-profile"
 
 # PATH
 if [ -z ${_INHERITED_PATH+x} ]; then
@@ -44,7 +54,7 @@ fi
 
 export PATH="${NODE_MAC_STABLE_PATH}:${RUBY_MAC_STABLE_PATH}:${GUIX_PATH}:${PKG_PATH}:${SNAP_BIN_PATH}:${USR_BIN_PATH}:${SYSTEM_BIN_PATH}:${_INHERITED_PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools"
 [[ -s "${HOME}/.sdkman/bin/sdkman-init.sh" ]] && source "${HOME}/.sdkman/bin/sdkman-init.sh"
-export PATH="${USER_BIN_PATH}:${CABAL_PATH}:${GHCUP_PATH}:${RUST_PATH}:${PATH}"
+export PATH="${USER_BIN_PATH}:${COURSIER_PATH}:${CABAL_PATH}:${GHCUP_PATH}:${RUST_PATH}:${PATH}:${_TRAILING_PATH}"
 
 ### dynamic path for ruby
 # export PATH="$(ruby -e 'puts Gem.user_dir')/bin:${PATH}"
@@ -55,13 +65,13 @@ export PATH="${USER_BIN_PATH}:${CABAL_PATH}:${GHCUP_PATH}:${RUST_PATH}:${PATH}"
 # fi
 
 # 整理 PATH，删除重复路径
-if [ -n "$PATH" ]; then
-    old_PATH=$PATH:; PATH=
+if [ -n "${PATH}" ]; then
+    old_PATH=${PATH}:; PATH=
     while [ -n "$old_PATH" ]; do
         x=${old_PATH%%:*}
-        case $PATH: in
+        case ${PATH}: in
            *:"$x":*) ;;
-           *) PATH=$PATH:$x;;
+           *) PATH=${PATH}:$x;;
         esac
         old_PATH=${old_PATH#*:}
     done
