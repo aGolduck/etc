@@ -1,7 +1,7 @@
 # 交互式模式的初始化脚本
 # 防止被加载两次
 if [ -z "$_INIT_SH_LOADED" ]; then
-    _INIT_SH_LOADED=1
+    export _INIT_SH_LOADED=1
 else
     return
 fi
@@ -14,8 +14,7 @@ case "$-" in
 esac
 
 ### source modules
-## env are set in zshenv
-# source $(dirname "$0")/env.sh
+source $(dirname "$0")/env.sh
 source $(dirname "$0")/functions.sh
 source $(dirname "$0")/aliases.sh
 source $(dirname "$0")/plugins.sh

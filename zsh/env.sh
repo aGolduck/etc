@@ -1,3 +1,9 @@
+# 防止被加载两次
+if [ -n "$_ENV_PATH" ]; then
+    export PATH=${_ENV_PATH}
+    return
+fi
+
 export ANDROID_HOME="${HOME}/Library/Android/sdk"
 
 export SNAP_BIN_PATH="/snap/bin"
@@ -79,6 +85,11 @@ if [ -n "${PATH}" ]; then
     unset old_PATH x
 fi
 export PATH
+
+# save PATH for
+# 1. in case /etc/zprofile or /etc/zshrc overwrites PATH
+# 2. just export it when loaded again
+export _ENV_PATH=${PATH}
 
 ## MANPATH is removed, it is not neccessary.
 ## if extra manuals are needed, set MANPATH as below
