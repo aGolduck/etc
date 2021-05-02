@@ -1,7 +1,8 @@
 # 交互式模式的初始化脚本
 # 防止被加载两次
+# 不需要 export, export 会影响子 shell
 if [ -z "$_INIT_SH_LOADED" ]; then
-    export _INIT_SH_LOADED=1
+    _INIT_SH_LOADED=1
 else
     return
 fi

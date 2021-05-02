@@ -89,7 +89,8 @@ export PATH
 # save PATH for
 # 1. in case /etc/zprofile or /etc/zshrc overwrites PATH
 # 2. just export it when loaded again
-export _ENV_PATH=${PATH}
+# 不需要 export, export 会影响子 shell
+_ENV_PATH=${PATH}
 
 ## MANPATH is removed, it is not neccessary.
 ## if extra manuals are needed, set MANPATH as below
