@@ -6,17 +6,18 @@ fi
 
 export ANDROID_HOME="${HOME}/Library/Android/sdk"
 
-export SNAP_BIN_PATH="/snap/bin"
-export USR_BIN_PATH="/usr/local/bin:/usr/local/sbin"
-export USER_BIN_PATH="${HOME}/bin:${HOME}/.local/bin"
-export SYSTEM_BIN_PATH="/usr/bin:/usr/sbin:/bin:/sbin:/snap/bin"
-export NODE_MAC_STABLE_PATH="/usr/local/opt/node@14/bin"
-export RUBY_MAC_STABLE_PATH="/usr/local/opt/ruby/bin"
-export PKG_PATH="/usr/pkg/bin:/usr/pkg/sbin"
-export RUST_PATH="${HOME}/.cargo/bin"
-export GUIX_PATH="${HOME}/.guix-profile/bin:${HOME}/.config/guix/current/bin"
 export CABAL_PATH="${HOME}/.cabal/bin"
 export GHCUP_PATH="${HOME}/.ghcup/bin"
+export GUIX_PATH="${HOME}/.guix-profile/bin:${HOME}/.config/guix/current/bin"
+export MAC_NODE_STABLE_PATH="/usr/local/opt/node@14/bin"
+export MAC_PKG_PATH="/usr/pkg/bin:/usr/pkg/sbin"
+export MAC_RUBY_STABLE_PATH="/usr/local/opt/ruby/bin"
+export MAC_GNUBIN_PATH="/usr/local/opt/coreutils/libexec/gnubin"
+export RUST_PATH="${HOME}/.cargo/bin"
+export SNAP_BIN_PATH="/snap/bin"
+export SYSTEM_BIN_PATH="/usr/bin:/usr/sbin:/bin:/sbin:/snap/bin"
+export USER_BIN_PATH="${HOME}/bin:${HOME}/.local/bin"
+export USR_BIN_PATH="/usr/local/bin:/usr/local/sbin"
 
 kernel="$(uname -s)"
 case $kernel in
@@ -58,7 +59,7 @@ if [ -z ${_INHERITED_PATH+x} ]; then
     _INHERITED_PATH=${PATH}
 fi
 
-export PATH="${NODE_MAC_STABLE_PATH}:${RUBY_MAC_STABLE_PATH}:${GUIX_PATH}:${PKG_PATH}:${SNAP_BIN_PATH}:${USR_BIN_PATH}:${SYSTEM_BIN_PATH}:${_INHERITED_PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools"
+export PATH="${MAC_NODE_STABLE_PATH}:${MAC_RUBY_STABLE_PATH}:${GUIX_PATH}:${MAC_PKG_PATH}:${SNAP_BIN_PATH}:${MAC_GNUBIN_PATH}:${USR_BIN_PATH}:${SYSTEM_BIN_PATH}:${_INHERITED_PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools"
 [[ -s "${HOME}/.sdkman/bin/sdkman-init.sh" ]] && source "${HOME}/.sdkman/bin/sdkman-init.sh"
 export PATH="${USER_BIN_PATH}:${COURSIER_PATH}:${CABAL_PATH}:${GHCUP_PATH}:${RUST_PATH}:${PATH}:${_TRAILING_PATH}"
 
