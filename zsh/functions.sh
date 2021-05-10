@@ -20,7 +20,10 @@ function cgh() {
 }
 
 function cgw() {
-    git clone git@git.woa.com:${${${${1}#'git@git.woa.com:'}#'https://git.code.oa.com/'}%'.git'}.git ~/w/${${${1}#'git@git.woa.com:'}%'.git'}
+    local removedSSH=${${1}#'git@git.woa.com:'}
+    local removedHTTPS=${${removedSSH}#'https://git.code.oa.com/'}
+    local gitRepo=${${removedHTTPS}%'.git'}
+    git clone git@git.woa.com:${gitRepo}.git ~/w/${gitRepo}
 }
 
 function pclip() {
