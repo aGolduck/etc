@@ -9,4 +9,4 @@ echo "source ~/.zshenv" >> ~/.config/plasma-workspace/env/path.sh
 
 tic -x -o ~/.terminfo ${ETC_REPO}/terminfo-24bit.src
 
-source ${ETC_REPO}/link.sh
+#source ${ETC_REPO}/link.sh

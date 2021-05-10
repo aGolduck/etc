@@ -1,4 +1,4 @@
-ETC_REPO='g/etc'
+ETC_REPO='${HOME}/g/etc'
 
 mkdir -p ~/.vnc
 ln -si ${ETC_REPO}/gemrc ~/.gemrc
@@ -18,9 +18,7 @@ ln -si ~/Applications/zotero/zotero.desktop ~/.local/share/applications/zotero.d
 
 # TODO 这种 link 方法不具备幂等性
 mkdir -p ~/g ~/b ~/r
-ln -si g ~/github.com
 ln -si g ~/github
 ln -si b ~/blob
 ln -si r ~/repo
-ln -si r ~/repository
 ln -si ../g ~/r/github.com
