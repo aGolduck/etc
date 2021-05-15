@@ -13,6 +13,7 @@ export MAC_NODE_STABLE_PATH="/usr/local/opt/node@14/bin"
 export MAC_PKG_PATH="/usr/pkg/bin:/usr/pkg/sbin"
 export MAC_RUBY_STABLE_PATH="/usr/local/opt/ruby/bin"
 export MAC_GNUBIN_PATH="/usr/local/opt/coreutils/libexec/gnubin"
+export NIX_PATH="${HOME}/.nix-profile/bin"
 export RUST_PATH="${HOME}/.cargo/bin"
 export SNAP_BIN_PATH="/snap/bin"
 export SYSTEM_BIN_PATH="/usr/bin:/usr/sbin:/bin:/sbin:/snap/bin"
@@ -50,16 +51,19 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 # 满足日常 node 包的使用的稳定要求，也满足 node 开发版本的切换需求
 export NPM_CONFIG_PREFIX=~/.local
 
+# nix
+if [ -e /home/w/.nix-profile/etc/profile.d/nix.sh ]; then source /home/w/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 # guix
 export GUIX_LOCPATH="${HOME}/.guix-profile/lib/locale"
 export GUIX_PROFILE="${HOME}/.guix-profile"
+[ -f "$GUIX_PROFILE/etc/profile" ] && source "$GUIX_PROFILE/etc/profile"
 
 # PATH
 if [ -z ${_INHERITED_PATH+x} ]; then
     _INHERITED_PATH=${PATH}
 fi
 
-export PATH="${MAC_NODE_STABLE_PATH}:${MAC_RUBY_STABLE_PATH}:${GUIX_PATH}:${MAC_PKG_PATH}:${SNAP_BIN_PATH}:${MAC_GNUBIN_PATH}:${USR_BIN_PATH}:${SYSTEM_BIN_PATH}:${_INHERITED_PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools"
+export PATH="${MAC_NODE_STABLE_PATH}:${MAC_RUBY_STABLE_PATH}:{NIX_PATH}:${GUIX_PATH}:${MAC_PKG_PATH}:${SNAP_BIN_PATH}:${MAC_GNUBIN_PATH}:${USR_BIN_PATH}:${SYSTEM_BIN_PATH}:${_INHERITED_PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools"
 [[ -s "${HOME}/.sdkman/bin/sdkman-init.sh" ]] && source "${HOME}/.sdkman/bin/sdkman-init.sh"
 export PATH="${USER_BIN_PATH}:${COURSIER_PATH}:${CABAL_PATH}:${GHCUP_PATH}:${RUST_PATH}:${PATH}:${_TRAILING_PATH}"
 
