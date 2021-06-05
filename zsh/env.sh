@@ -13,7 +13,7 @@ export MAC_NODE_STABLE_PATH="/usr/local/opt/node@14/bin"
 export MAC_PKG_PATH="/usr/pkg/bin:/usr/pkg/sbin"
 export MAC_RUBY_STABLE_PATH="/usr/local/opt/ruby/bin"
 export MAC_GNUBIN_PATH="/usr/local/opt/coreutils/libexec/gnubin"
-export NIX_PATH="${HOME}/.nix-profile/bin"
+export _NIX_PATH="${HOME}/.nix-profile/bin:/nix/var/nix/profiles/default/bin" # NIX_PATH is occupied, see /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
 export RUST_PATH="${HOME}/.cargo/bin"
 export SNAP_BIN_PATH="/snap/bin"
 export SYSTEM_BIN_PATH="/usr/bin:/usr/sbin:/bin:/sbin:/snap/bin"
@@ -63,7 +63,7 @@ if [ -z ${_INHERITED_PATH+x} ]; then
     _INHERITED_PATH=${PATH}
 fi
 
-export PATH="${MAC_NODE_STABLE_PATH}:${MAC_RUBY_STABLE_PATH}:{NIX_PATH}:${GUIX_PATH}:${MAC_PKG_PATH}:${SNAP_BIN_PATH}:${MAC_GNUBIN_PATH}:${USR_BIN_PATH}:${SYSTEM_BIN_PATH}:${_INHERITED_PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools"
+export PATH="${MAC_NODE_STABLE_PATH}:${MAC_RUBY_STABLE_PATH}:${_NIX_PATH}:${GUIX_PATH}:${MAC_PKG_PATH}:${SNAP_BIN_PATH}:${MAC_GNUBIN_PATH}:${USR_BIN_PATH}:${SYSTEM_BIN_PATH}:${_INHERITED_PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools"
 [[ -s "${HOME}/.sdkman/bin/sdkman-init.sh" ]] && source "${HOME}/.sdkman/bin/sdkman-init.sh"
 export PATH="${USER_BIN_PATH}:${COURSIER_PATH}:${CABAL_PATH}:${GHCUP_PATH}:${RUST_PATH}:${PATH}:${_TRAILING_PATH}"
 

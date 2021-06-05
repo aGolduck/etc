@@ -1,5 +1,6 @@
 ETC_REPO="${HOME}/g/w/etc"
 
+mkdir -p ${ETC_REPO}
 git clone https://github.com/aGolduck/etc.git ${ETC_REPO}
 git clone https://github.com/zsh-users/antigen.git ~/g/zsh-users/antigen
 echo "source ${ETC_REPO}/zsh/interactive.sh" >> ~/.zshrc
