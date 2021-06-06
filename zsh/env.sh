@@ -13,12 +13,13 @@ export MAC_NODE_STABLE_PATH="/usr/local/opt/node@14/bin"
 export MAC_PKG_PATH="/usr/pkg/bin:/usr/pkg/sbin"
 export MAC_RUBY_STABLE_PATH="/usr/local/opt/ruby/bin"
 export MAC_GNUBIN_PATH="/usr/local/opt/coreutils/libexec/gnubin"
-export _NIX_PATH="${HOME}/.nix-profile/bin:/nix/var/nix/profiles/default/bin" # NIX_PATH is occupied, see /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
+export _NIX_PATH="${HOME}/.nix-profile/bin:/nix/var/nix/profiles/default/bin:${HOME}/.nix-profile/sbin:/nix/var/nix/profiles/default/sbin" # NIX_PATH is occupied, see /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
 export RUST_PATH="${HOME}/.cargo/bin"
 export SNAP_BIN_PATH="/snap/bin"
 export SYSTEM_BIN_PATH="/usr/bin:/usr/sbin:/bin:/sbin:/snap/bin"
 export USER_BIN_PATH="${HOME}/bin:${HOME}/.local/bin"
 export USR_BIN_PATH="/usr/local/bin:/usr/local/sbin"
+export SDKMAN_PATH=
 
 kernel="$(uname -s)"
 case $kernel in
