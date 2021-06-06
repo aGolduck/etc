@@ -60,13 +60,13 @@ export GUIX_PROFILE="${HOME}/.guix-profile"
 [ -f "$GUIX_PROFILE/etc/profile" ] && source "$GUIX_PROFILE/etc/profile"
 
 # PATH
-if [ -z ${_INHERITED_PATH+x} ]; then
-    _INHERITED_PATH=${PATH}
-fi
+# if [ -z ${_INHERITED_PATH+x} ]; then
+    # _INHERITED_PATH=${PATH}
+# fi
 
-export PATH="${MAC_NODE_STABLE_PATH}:${MAC_RUBY_STABLE_PATH}:${_NIX_PATH}:${GUIX_PATH}:${MAC_PKG_PATH}:${SNAP_BIN_PATH}:${MAC_GNUBIN_PATH}:${USR_BIN_PATH}:${SYSTEM_BIN_PATH}:${_INHERITED_PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools"
+export PATH="${MAC_NODE_STABLE_PATH}:${MAC_RUBY_STABLE_PATH}:${_NIX_PATH}:${GUIX_PATH}:${MAC_PKG_PATH}:${SNAP_BIN_PATH}:${MAC_GNUBIN_PATH}:${USR_BIN_PATH}:${SYSTEM_BIN_PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools"
 [[ -s "${HOME}/.sdkman/bin/sdkman-init.sh" ]] && source "${HOME}/.sdkman/bin/sdkman-init.sh"
-export PATH="${USER_BIN_PATH}:${COURSIER_PATH}:${CABAL_PATH}:${GHCUP_PATH}:${RUST_PATH}:${PATH}:${_TRAILING_PATH}"
+export PATH="${USER_BIN_PATH}:${COURSIER_PATH}:${CABAL_PATH}:${GHCUP_PATH}:${RUST_PATH}:${PATH}"
 
 ### dynamic path for ruby
 # export PATH="$(ruby -e 'puts Gem.user_dir')/bin:${PATH}"
