@@ -21,7 +21,8 @@ function cgh() {
 
 function cgw() {
     local removedSSH=${${1}#'git@git.woa.com:'}
-    local removedHTTPS=${${removedSSH}#'https://git.code.oa.com/'}
+    local removedOAHTTPS=${${removedSSH}#'https://git.code.oa.com/'}
+    local removedHTTPS=${${removedOAHTTPS}#'https://git.woa.com/'}
     local gitRepo=${${removedHTTPS}%'.git'}
     git clone git@git.woa.com:${gitRepo}.git ~/w/${gitRepo}
 }
