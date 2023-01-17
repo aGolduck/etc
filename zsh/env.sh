@@ -9,7 +9,7 @@ export ANDROID_HOME="${HOME}/Library/Android/sdk"
 export CABAL_PATH="${HOME}/.cabal/bin"
 export GHCUP_PATH="${HOME}/.ghcup/bin"
 export GUIX_PATH="${HOME}/.guix-profile/bin:${HOME}/.config/guix/current/bin"
-export MAC_NODE_STABLE_PATH="/usr/local/opt/node@14/bin"
+export MAC_NODE_STABLE_PATH="/usr/local/opt/node@18/bin"
 export MAC_PKG_PATH="/usr/pkg/bin:/usr/pkg/sbin"
 export MAC_RUBY_STABLE_PATH="/usr/local/opt/ruby/bin"
 export MAC_GNUBIN_PATH="/usr/local/opt/coreutils/libexec/gnubin"
@@ -36,6 +36,8 @@ esac
 # export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"
 export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
 export HOMEBREW_NO_AUTO_UPDATE=1
+# simply emacsclient is not workling
+export HOMEBREW_EDITOR="emacsclient --socket ${TMPDIR}/emacs${UID}/server -n -a emacs"
 
 # export RUSTUP_DIST_SERVER="https://mirrors.ustc.edu.cn/rust-static"
 # export RUSTUP_UPDATE_ROOT="https://mirrors.ustc.edu.cn/rust-static/rustup"
@@ -101,3 +103,4 @@ _ENV_PATH=${PATH}
 ## MANPATH is removed, it is not neccessary.
 ## if extra manuals are needed, set MANPATH as below
 ## export MANPATH="$(manpath):/other/manual/paths"
+export MANPATH="$(manpath):/usr/local/opt/erlang/lib/erlang/man"

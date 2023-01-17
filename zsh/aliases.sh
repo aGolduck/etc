@@ -1,4 +1,4 @@
-alias 'top'='top -c'
+# alias 'top'='top -c'
 alias 'e'='emacsclient -nw'
 alias 'rm'='rm -i '
 ## use ghcup, aliases below are no longer needed
