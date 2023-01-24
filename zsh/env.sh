@@ -1,3 +1,5 @@
+### to be sourced by ~/.zshenv and ~/.zprofile
+
 # 防止被加载两次
 if [ -n "$_ENV_PATH" ]; then
     export PATH=${_ENV_PATH}

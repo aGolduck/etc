@@ -1,3 +1,16 @@
+### to be sourced by ~/.zshrc
+
+# emacs tramp TERM 类型为 dumb, emacs tramp 无法使用复杂的 prompt，会导致 tramp 卡住整个 emacs
+# 可能设置好 tramp-shell-prompt-pattern 可以通过，成本过高
+# 且 tramp 和 eshell 都不需要复杂的交互，直接禁用
+# 详见 https://www.reddit.com/r/emacs/comments/uxqafc/has_tramp_ever_work_for_you_flawlessly/
+if [[ $TERM == "dumb" ]]; then
+    unsetopt zle;
+    PS1='$ '
+    return
+fi
+
+
 # 交互式模式的初始化脚本
 # 防止被加载两次
 # 不需要 export, export 会影响子 shell
