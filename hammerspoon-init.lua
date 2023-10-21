@@ -21,8 +21,8 @@ hs.hotkey.bind({"alt"}, "M", function()
          open_app("Emacs")()
       end
 end)
-hs.hotkey.bind({"cmd"}, "right", function() hs.window.focusedWindow():moveOneScreenEast(true, true) end)
-hs.hotkey.bind({"cmd"}, "left", function() hs.window.focusedWindow():moveOneScreenWest(true, true) end)
+hs.hotkey.bind({"cmd", "shift"}, "right", function() hs.window.focusedWindow():moveOneScreenEast(true, true) end)
+hs.hotkey.bind({"cmd", "shift"}, "left", function() hs.window.focusedWindow():moveOneScreenWest(true, true) end)
 
 hs.hotkey.bind({"cmd", "ctrl"}, "L", function() hs.alert.show(hs.application.frontmostApplication():title()) end)
 

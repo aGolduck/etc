@@ -1,20 +1,7 @@
 ### functions
 
-function exists { which $1 &> /dev/null }
-#if exists percol; then
-#    function percol_select_history() {
-#        local tac
-#        exists gtac && tac="gtac" || { exists tac && tac="tac" || { tac="tail -r" } }
-#        BUFFER=$(fc -l -n 1 | eval $tac | percol --query "$LBUFFER")
-#        CURSOR=$#BUFFER         # move cursor
-#        zle -R -c               # refresh
-#    }
-#
-
-#    zle -N percol_select_history
-#    bindkey '^R' percol_select_history
-#fi
-
+# TODO 写得很好，以后不要写了
+# 加上注释，改写成代码语言，把参数传给脚本代码 python/js/clojure
 function cgh() {
     git clone https://github.com/${${${1}#'https://github.com/'}%'.git'}.git ~/g/${${${1}#'https://github.com/'}%'.git'}
 }

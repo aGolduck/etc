@@ -19,3 +19,11 @@
 #	postBuffer = 100000000
 [tag]
 	gpgSign = true
+[includeIf "gitdir:~/g/"]
+    path = ~/.gitconfig_g
+[includeIf "gitdir:~/b/g/"]
+    path = ~/.gitconfig_g
+[includeIf "gitdir:~/w/"]
+    path = ~/.gitconfig_w
+[includeIf "gitdir:~/b/w/"]
+    path = ~/.gitconfig_w
