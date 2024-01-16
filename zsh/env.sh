@@ -21,6 +21,7 @@ export SNAP_BIN_PATH="/snap/bin"
 export SYSTEM_BIN_PATH="/usr/bin:/usr/sbin:/bin:/sbin:/snap/bin"
 export USER_BIN_PATH="${HOME}/bin:${HOME}/.local/bin"
 export USR_BIN_PATH="/usr/local/bin:/usr/local/sbin"
+export HOMEBREW_OPT_PATH="/opt/homebrew/bin"
 export SDKMAN_PATH=
 
 kernel="$(uname -s)"
@@ -68,7 +69,7 @@ export GUIX_PROFILE="${HOME}/.guix-profile"
     # _INHERITED_PATH=${PATH}
 # fi
 
-export PATH="${MAC_NODE_STABLE_PATH}:${MAC_RUBY_STABLE_PATH}:${_NIX_PATH}:${GUIX_PATH}:${MAC_PKG_PATH}:${SNAP_BIN_PATH}:${MAC_GNUBIN_PATH}:${USR_BIN_PATH}:${SYSTEM_BIN_PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools"
+export PATH="${MAC_NODE_STABLE_PATH}:${MAC_RUBY_STABLE_PATH}:${_NIX_PATH}:${GUIX_PATH}:${MAC_PKG_PATH}:${SNAP_BIN_PATH}:${MAC_GNUBIN_PATH}:${HOMEBREW_OPT_PATH}:${USR_BIN_PATH}:${SYSTEM_BIN_PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools"
 [[ -s "${HOME}/.sdkman/bin/sdkman-init.sh" ]] && source "${HOME}/.sdkman/bin/sdkman-init.sh"
 export PATH="${USER_BIN_PATH}:${COURSIER_PATH}:${CABAL_PATH}:${GHCUP_PATH}:${RUST_PATH}:${PATH}"
 
