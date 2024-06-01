@@ -28,16 +28,18 @@ end)
 hs.hotkey.bind({"alt"}, "L", function()
       current_app = hs.application.frontmostApplication()
       current_app_name= current_app:title()
-      if current_app_name == "Emacs" then
+      current_app_bundle_id = current_app:bundleID()
+      if current_app_bundle_id == "org.gnu.emacs" then
          hs.eventtap.keyStroke({"alt"}, "L", 0, current_app)
       else
          hs.execute("open '/Users/w/Applications/IntelliJ IDEA Ultimate.app'")
       end
 end)
 hs.hotkey.bind({"alt"}, "C", function()
-      current_app = hs.application.frontmostApplication()
-      current_app_name= current_app:title()
-      hs.execute("open '/Users/w/Library/Caches/JetBrains/JetBrainsClientDist/JetBrainsClient-233.15026.9-aarch64.sit-03ce3ecd7e.ide.d/IntelliJ IDEA.app/'")
+      hs.execute("open '/Users/w/Library/Caches/JetBrains/JetBrainsClientDist/JetBrainsClient-233.15026.9-aarch64.sit-03ce3ecd7e.ide.d/IntelliJ IDEA.app'")
+end)
+hs.hotkey.bind({"alt"}, "-", function()
+      hs.execute("open '/Applications/iTerm.app'")
 end)
 hs.hotkey.bind({"cmd", "shift"}, "right", function() hs.window.focusedWindow():moveOneScreenEast(true, true) end)
 hs.hotkey.bind({"cmd", "shift"}, "left", function() hs.window.focusedWindow():moveOneScreenWest(true, true) end)
